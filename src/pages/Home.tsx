@@ -48,10 +48,10 @@ const Home = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                Welcome! I'm Hamed
+                Hamed Ajorlou
               </Typography>
               <Typography variant="h4" color="text.secondary" gutterBottom>
-                Research Assistant
+                Graduate Research Assistant
               </Typography>
               
               <Typography 
@@ -83,6 +83,85 @@ const Home = () => {
               >
                 Currently, I'm focused on developing novel approaches in graph representation learning, particularly leveraging GNNs for complex network analysis and optimization problems. I'm especially interested in the interplay between machine learning and signal processing on graphs, aiming to design scalable, interpretable, and theoretically grounded models.
               </Typography>
+
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  fontWeight: 600,
+                  mb: 2,
+                  color: 'text.primary',
+                }}
+              >
+                Education
+              </Typography>
+
+              <Box sx={{ mb: 4 }}>
+                <Typography 
+                  variant="body1" 
+                  sx={{ 
+                    fontSize: '1.1rem',
+                    color: 'text.primary',
+                    lineHeight: 1.8,
+                    mb: 1,
+                    fontWeight: 500,
+                  }}
+                >
+                  Ph.D. in Electrical and Computer Engineering
+                </Typography>
+                <Typography 
+                  variant="body2" 
+                  sx={{ 
+                    color: 'text.secondary',
+                    mb: 2,
+                  }}
+                >
+                  University of Rochester • Sep 2023 - Present
+                </Typography>
+
+                <Typography 
+                  variant="body1" 
+                  sx={{ 
+                    fontSize: '1.1rem',
+                    color: 'text.primary',
+                    lineHeight: 1.8,
+                    mb: 1,
+                    fontWeight: 500,
+                  }}
+                >
+                  M.Sc. in Electrical Engineering
+                </Typography>
+                <Typography 
+                  variant="body2" 
+                  sx={{ 
+                    color: 'text.secondary',
+                    mb: 2,
+                  }}
+                >
+                  Sharif University of Technology • Sep 2023 - Jun 2025
+                </Typography>
+
+                <Typography 
+                  variant="body1" 
+                  sx={{ 
+                    fontSize: '1.1rem',
+                    color: 'text.primary',
+                    lineHeight: 1.8,
+                    mb: 1,
+                    fontWeight: 500,
+                  }}
+                >
+                  B.Sc. in Electrical Engineering
+                </Typography>
+                <Typography 
+                  variant="body2" 
+                  sx={{ 
+                    color: 'text.secondary',
+                    mb: 2,
+                  }}
+                >
+                  Sharif University of Technology • Sep 2018 - Jun 2023
+                </Typography>
+              </Box>
 
               <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
                 <Button

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brain outline -->
+  <path d="M256 96C356.5 96 440 179.5 440 280C440 380.5 356.5 464 256 464C155.5 464 72 380.5 72 280C72 179.5 155.5 96 256 96Z" 
+        stroke="#1976d2" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Circuit nodes -->
+  <circle cx="256" cy="280" r="12" fill="#9c27b0"/>
+  <circle cx="180" cy="220" r="12" fill="#9c27b0"/>
+  <circle cx="332" cy="220" r="12" fill="#9c27b0"/>
+  <circle cx="180" cy="340" r="12" fill="#9c27b0"/>
+  <circle cx="332" cy="340" r="12" fill="#9c27b0"/>
+  
+  <!-- Circuit connections -->
+  <path d="M256 280L180 220M256 280L332 220M256 280L180 340M256 280L332 340" 
+        stroke="#9c27b0" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Neural network nodes -->
+  <circle cx="140" cy="280" r="8" fill="#1976d2"/>
+  <circle cx="372" cy="280" r="8" fill="#1976d2"/>
+  <circle cx="256" cy="160" r="8" fill="#1976d2"/>
+  <circle cx="256" cy="400" r="8" fill="#1976d2"/>
+  
+  <!-- Neural connections -->
+  <path d="M140 280C180 220 332 220 372 280M140 280C180 340 332 340 372 280" 
+        stroke="#1976d2" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M256 160C180 220 180 340 256 400M256 160C332 220 332 340 256 400" 
+        stroke="#1976d2" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg> 
