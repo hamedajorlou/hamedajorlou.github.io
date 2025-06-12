@@ -3,65 +3,81 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <Container maxWidth="lg" sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', py: 8 }}>
-      <Grid container spacing={4} sx={{ justifyContent: 'flex-end', pr: { xs: 0, md: 8 } }}>
-        <Grid item xs={12}>
+    <Container 
+      maxWidth={false} 
+      sx={{ 
+        display: 'flex', 
+        alignItems: 'center',
+        maxWidth: '1800px'
+      }}
+    >
+      <Grid 
+        container 
+        spacing={4} 
+        sx={{ 
+          alignItems: 'center',
+          pr: { xs: 2, md: 4 },
+          justifyContent: 'flex-end',
+        }}
+      >
+        <Grid 
+          item 
+          xs={12} 
+          md={7} 
+          sx={{
+            pl: { md: 32 },
+          }}
+        >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Typography variant="h3" component="h1" gutterBottom align="right">
+            <Typography variant="h3" component="h1" gutterBottom>
               About Me
             </Typography>
           </motion.div>
-        </Grid>
 
-        <Grid item xs={12} md={6}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Paper elevation={3} sx={{ p: 3 }}>
-              <Typography variant="h5" gutterBottom align="right">
+            <Paper elevation={3} sx={{ p: 3, mb: 4 }}>
+              <Typography variant="h5" gutterBottom>
                 Professional Background
               </Typography>
-              <Typography paragraph align="right">
+              <Typography paragraph>
                 [Your professional background and experience here]
               </Typography>
             </Paper>
           </motion.div>
-        </Grid>
 
-        <Grid item xs={12} md={6}>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Paper elevation={3} sx={{ p: 3 }}>
-              <Typography variant="h5" gutterBottom align="right">
+            <Paper elevation={3} sx={{ p: 3, mb: 4 }}>
+              <Typography variant="h5" gutterBottom>
                 Skills & Expertise
               </Typography>
-              <Typography paragraph align="right">
+              <Typography paragraph>
                 [List your technical skills and areas of expertise]
               </Typography>
             </Paper>
           </motion.div>
-        </Grid>
 
-        <Grid item xs={12} md={8}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Paper elevation={3} sx={{ p: 3 }}>
-              <Typography variant="h5" gutterBottom align="right">
+              <Typography variant="h5" gutterBottom>
                 Education & Certifications
               </Typography>
-              <Typography paragraph align="right">
+              <Typography paragraph>
                 [Your educational background and certifications]
               </Typography>
             </Paper>
