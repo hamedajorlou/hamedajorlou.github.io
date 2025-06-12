@@ -3,9 +3,18 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <AppBar position="fixed" color="default" elevation={0} sx={{ backgroundColor: 'white', minHeight: '64px' }}>
+    <AppBar position="fixed" color="default" elevation={0} sx={{ backgroundColor: 'white', minHeight: '80px' }}>
       <Container maxWidth={false} sx={{ width: '100%' }}>
-        <Toolbar disableGutters sx={{ width: '100%', px: { xs: 2, md: 4 }, minHeight: '64px' }}>
+        <Toolbar 
+          disableGutters 
+          sx={{ 
+            width: '100%', 
+            px: { xs: 2, md: 4 }, 
+            minHeight: '80px',
+            display: 'flex',
+            alignItems: 'center'
+          }}
+        >
           <Typography
             variant="h6"
             component={RouterLink}
@@ -16,9 +25,11 @@ const Navbar = () => {
               color: 'black',
               textDecoration: 'none',
               minWidth: { xs: '120px', md: '200px' },
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
+              fontSize: { xs: '1.2rem', md: '1.4rem' },
               lineHeight: 1.2,
-              py: 1
+              py: 2,
+              display: 'flex',
+              alignItems: 'center'
             }}
           >
             HAMED AJORLOU
@@ -31,6 +42,7 @@ const Navbar = () => {
               sx={{
                 fontWeight: 500,
                 fontSize: '0.9rem',
+                py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
                   color: 'primary.main',
@@ -46,6 +58,7 @@ const Navbar = () => {
               sx={{
                 fontWeight: 500,
                 fontSize: '0.9rem',
+                py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
                   color: 'primary.main',
@@ -61,6 +74,7 @@ const Navbar = () => {
               sx={{
                 fontWeight: 500,
                 fontSize: '0.9rem',
+                py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
                   color: 'primary.main',
@@ -76,6 +90,7 @@ const Navbar = () => {
               sx={{
                 fontWeight: 500,
                 fontSize: '0.9rem',
+                py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
                   color: 'primary.main',
