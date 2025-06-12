@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button, Container, Box } from '@mui/material';
+import { AppBar, Toolbar, Button, Container, Box } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -12,36 +12,18 @@ const Navbar = () => {
             px: { xs: 2, md: 4 }, 
             minHeight: '80px',
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
         >
-          <Typography
-            variant="h6"
-            component={RouterLink}
-            to="/"
-            sx={{
-              flexGrow: 1,
-              fontWeight: 600,
-              color: 'black',
-              textDecoration: 'none',
-              minWidth: { xs: '120px', md: '200px' },
-              fontSize: { xs: '1.2rem', md: '1.4rem' },
-              lineHeight: 1.2,
-              py: 2,
-              display: 'flex',
-              alignItems: 'center'
-            }}
-          >
-            HAMED AJORLOU
-          </Typography>
-          <Box sx={{ display: 'flex', gap: 2 }}>
+          <Box sx={{ display: 'flex', gap: 4 }}>
             <Button
               component={RouterLink}
               to="/"
               color="inherit"
               sx={{
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '1.1rem',
                 py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
@@ -57,7 +39,7 @@ const Navbar = () => {
               color="inherit"
               sx={{
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '1.1rem',
                 py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
@@ -73,7 +55,7 @@ const Navbar = () => {
               color="inherit"
               sx={{
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '1.1rem',
                 py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
@@ -89,7 +71,7 @@ const Navbar = () => {
               color="inherit"
               sx={{
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '1.1rem',
                 py: 1,
                 '&:hover': {
                   backgroundColor: 'transparent',
