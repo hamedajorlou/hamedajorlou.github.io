@@ -19,10 +19,10 @@ const Contact = () => {
           Email: <a href="mailto:hajorlou@ur.rochester.edu" style={{ color: '#1976d2', textDecoration: 'underline' }}>hajorlou@ur.rochester.edu</a>
         </Typography>
         <Typography variant="body1" paragraph>
-          Office: 701 CSB Building, River Campus
+          Office: 701 Computer Science Building
         </Typography>
         <Typography variant="body1" paragraph>
-          Phone: (123) 456-7890
+          Phone: +1 (585) 490-6184
         </Typography>
       </Box>
     </Container>
