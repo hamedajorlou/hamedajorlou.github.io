@@ -9,10 +9,9 @@ const Home = () => {
     <Container 
       maxWidth={false} 
       sx={{ 
-        // height: '100vh',  // Removed to allow scrolling
         display: 'flex', 
         alignItems: 'center',
-        maxWidth: '1800px' // Custom max width to prevent too wide layout
+        maxWidth: '1800px'
       }}
     >
       <Grid 
@@ -20,8 +19,8 @@ const Home = () => {
         spacing={4} 
         sx={{ 
           alignItems: 'center',
-          pr: { xs: 2, md: 4 }, // Reduced right padding
-          justifyContent: 'flex-end', // Push content to the right
+          pr: { xs: 2, md: 4 },
+          justifyContent: 'flex-end',
         }}
       >
         <Grid 
@@ -29,7 +28,7 @@ const Home = () => {
           xs={12} 
           md={7} 
           sx={{
-            pl: { md: 32 }, // Significantly increased left padding for more central position
+            pl: { md: 32 },
           }}
         >
           <motion.div
@@ -249,10 +248,10 @@ const Home = () => {
                 borderColor: 'divider',
               }}
             >
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, textAlign: 'right' }}>
+              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
                 Technical Expertise
               </Typography>
-              <Grid container spacing={2} justifyContent="flex-end">
+              <Grid container spacing={2}>
                 {[
                   'GNNs',
                   'Optimization',
