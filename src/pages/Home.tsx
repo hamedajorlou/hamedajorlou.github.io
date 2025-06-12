@@ -118,24 +118,45 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Typography variant="h4" component="h2" gutterBottom align="left">
-              Technical Expertise
-            </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'flex-start', mb: 4 }}>
-              {['GNNs', 'Optimization', 'Pytorch', 'Deep Learning', 'Git', 'Bash', 'Linux'].map((skill) => (
-                <Chip
-                  key={skill}
-                  label={skill}
-                  sx={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.08)',
-                    '&:hover': {
-                      backgroundColor: 'rgba(0, 0, 0, 0.12)',
-                    },
-                  }}
-                />
-              ))}
-            </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'flex-start', gap: 4, mt: 4 }}>
+            <Paper 
+              elevation={0}
+              sx={{ 
+                p: 4,
+                borderRadius: 4,
+                bgcolor: 'background.paper',
+                border: '1px solid',
+                borderColor: 'divider',
+                mb: 4
+              }}
+            >
+              <Typography variant="h4" component="h2" gutterBottom align="left">
+                Technical Expertise
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'flex-start' }}>
+                {['GNNs', 'Optimization', 'Pytorch', 'Deep Learning', 'Git', 'Bash', 'Linux'].map((skill) => (
+                  <Chip
+                    key={skill}
+                    label={skill}
+                    sx={{
+                      backgroundColor: 'rgba(0, 0, 0, 0.08)',
+                      '&:hover': {
+                        backgroundColor: 'rgba(0, 0, 0, 0.12)',
+                      },
+                    }}
+                  />
+                ))}
+              </Box>
+            </Paper>
+          </motion.div>
+        </Grid>
+
+        <Grid item xs={12}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start', gap: 4, mt: 2 }}>
               <Box
                 component="img"
                 src={UofRLogo}
