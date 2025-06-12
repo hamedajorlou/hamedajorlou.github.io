@@ -76,10 +76,11 @@ function App() {
           minHeight: '100vh',
           display: 'flex',
           flexDirection: 'column',
-          bgcolor: 'background.default'
+          bgcolor: 'background.default',
+          width: '100%'
         }}>
           <Navbar />
-          <Box component="main" sx={{ flexGrow: 1, py: 3 }}>
+          <Box component="main" sx={{ flexGrow: 1, py: 3, width: '100%' }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
