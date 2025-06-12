@@ -5,59 +5,68 @@ import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 
 const Home = () => {
   return (
-    <Container>
-      <Grid container spacing={4} sx={{ minHeight: '90vh', alignItems: 'center' }}>
+    <Container maxWidth="lg" sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
+      <Grid 
+        container 
+        spacing={4} 
+        sx={{ 
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Grid item xs={12} md={6}>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Typography 
-              variant="h1" 
-              gutterBottom 
-              sx={{ 
-                fontWeight: 700,
-                background: 'linear-gradient(45deg, #1976d2, #9c27b0)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}
-            >
-              Welcome! I'm Hamed
-            </Typography>
-            <Typography variant="h4" color="text.secondary" gutterBottom>
-              Software Engineer & Researcher
-            </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
-              I specialize in developing innovative solutions and conducting research in computer science.
-              My focus is on creating impactful technology that solves real-world problems.
-            </Typography>
-
-            <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
-              <Button
-                variant="contained"
-                size="large"
-                component={RouterLink}
-                to="/projects"
-                sx={{ minWidth: 120 }}
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography 
+                variant="h1" 
+                gutterBottom 
+                sx={{ 
+                  fontWeight: 700,
+                  background: 'linear-gradient(45deg, #1976d2, #9c27b0)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
               >
-                View Projects
-              </Button>
-              <Button
-                variant="outlined"
-                size="large"
-                component={RouterLink}
-                to="/contact"
-                sx={{ minWidth: 120 }}
-              >
-                Contact Me
-              </Button>
-            </Box>
+                Welcome! I'm Hamed
+              </Typography>
+              <Typography variant="h4" color="text.secondary" gutterBottom>
+                Software Engineer & Researcher
+              </Typography>
+              <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
+                I specialize in developing innovative solutions and conducting research in computer science.
+                My focus is on creating impactful technology that solves real-world problems.
+              </Typography>
 
-            <Box sx={{ display: 'flex', gap: 2 }}>
-              <IconLink href="https://github.com/hamedajorlou" icon={<GitHub />} label="GitHub" />
-              <IconLink href="https://linkedin.com/in/hamedajorlou" icon={<LinkedIn />} label="LinkedIn" />
-              <IconLink href="mailto:hajorlou@ur.rochester.edu" icon={<Email />} label="Email" />
+              <Box sx={{ display: 'flex', gap: 2, mb: 4, justifyContent: 'center' }}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  component={RouterLink}
+                  to="/projects"
+                  sx={{ minWidth: 120 }}
+                >
+                  View Projects
+                </Button>
+                <Button
+                  variant="outlined"
+                  size="large"
+                  component={RouterLink}
+                  to="/contact"
+                  sx={{ minWidth: 120 }}
+                >
+                  Contact Me
+                </Button>
+              </Box>
+
+              <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+                <IconLink href="https://github.com/hamedajorlou" icon={<GitHub />} label="GitHub" />
+                <IconLink href="https://linkedin.com/in/hamedajorlou" icon={<LinkedIn />} label="LinkedIn" />
+                <IconLink href="mailto:hajorlou@ur.rochester.edu" icon={<Email />} label="Email" />
+              </Box>
             </Box>
           </motion.div>
         </Grid>
@@ -78,10 +87,10 @@ const Home = () => {
                 borderColor: 'divider',
               }}
             >
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, textAlign: 'center' }}>
                 Technical Expertise
               </Typography>
-              <Grid container spacing={2}>
+              <Grid container spacing={2} justifyContent="center">
                 {[
                   'Machine Learning',
                   'Data Science',

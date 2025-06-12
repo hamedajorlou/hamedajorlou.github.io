@@ -3,18 +3,20 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <Container sx={{ py: 8 }}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <Typography variant="h3" component="h1" gutterBottom align="center">
-          About Me
-        </Typography>
-      </motion.div>
+    <Container maxWidth="lg" sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', py: 8 }}>
+      <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
+        <Grid item xs={12}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Typography variant="h3" component="h1" gutterBottom align="center">
+              About Me
+            </Typography>
+          </motion.div>
+        </Grid>
 
-      <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -22,7 +24,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <Paper elevation={3} sx={{ p: 3 }}>
-              <Typography variant="h5" gutterBottom>
+              <Typography variant="h5" gutterBottom align="center">
                 Professional Background
               </Typography>
               <Typography paragraph>
@@ -39,7 +41,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Paper elevation={3} sx={{ p: 3 }}>
-              <Typography variant="h5" gutterBottom>
+              <Typography variant="h5" gutterBottom align="center">
                 Skills & Expertise
               </Typography>
               <Typography paragraph>
@@ -49,14 +51,14 @@ const About = () => {
           </motion.div>
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid item xs={12} md={8}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Paper elevation={3} sx={{ p: 3 }}>
-              <Typography variant="h5" gutterBottom>
+              <Typography variant="h5" gutterBottom align="center">
                 Education & Certifications
               </Typography>
               <Typography paragraph>
