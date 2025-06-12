@@ -45,10 +45,35 @@ const Home = () => {
               <Typography variant="h4" color="text.secondary" gutterBottom>
                 Software Engineer & Researcher
               </Typography>
-              <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
-                I specialize in developing innovative solutions and conducting research in computer science.
-                My focus is on creating impactful technology that solves real-world problems.
-              </Typography>
+              
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 3,
+                  mb: 4,
+                  borderRadius: 2,
+                  backgroundColor: 'rgba(25, 118, 210, 0.04)',
+                  border: '1px solid',
+                  borderColor: 'primary.light',
+                  maxWidth: '600px',
+                  ml: 'auto', // Aligns the box to the right
+                }}
+              >
+                <Typography 
+                  variant="body1" 
+                  sx={{ 
+                    fontSize: '1.1rem',
+                    color: 'text.primary',
+                    lineHeight: 1.8,
+                    letterSpacing: 0.3,
+                  }}
+                >
+                  As a Computer Science Ph.D. candidate at the University of Rochester, 
+                  I blend advanced research with practical software engineering. My focus 
+                  lies in developing innovative solutions in machine learning and data science, 
+                  particularly in natural language processing and computer vision.
+                </Typography>
+              </Paper>
 
               <Box sx={{ display: 'flex', gap: 2, mb: 4, justifyContent: 'flex-end' }}>
                 <Button
@@ -56,7 +81,12 @@ const Home = () => {
                   size="large"
                   component={RouterLink}
                   to="/projects"
-                  sx={{ minWidth: 120 }}
+                  sx={{ 
+                    minWidth: 120,
+                    borderRadius: 2,
+                    textTransform: 'none',
+                    fontSize: '1.1rem',
+                  }}
                 >
                   View Projects
                 </Button>
@@ -65,7 +95,12 @@ const Home = () => {
                   size="large"
                   component={RouterLink}
                   to="/contact"
-                  sx={{ minWidth: 120 }}
+                  sx={{ 
+                    minWidth: 120,
+                    borderRadius: 2,
+                    textTransform: 'none',
+                    fontSize: '1.1rem',
+                  }}
                 >
                   Contact Me
                 </Button>
