@@ -66,7 +66,7 @@ const Home = () => {
                   mb: 4,
                 }}
               >
-                I'm a second year Ph.D. student at University of Rochester where I'm fortunate enough to work with Prof. Gonzalo Mateos. My main research interests span across GNNs, Optimization and Graphical models.
+                I'm a second-year Ph.D. student at the University of Rochester, advised by Prof. Gonzalo Mateos. My research interests lie at the intersection of Graph Neural Networks (GNNs), optimization, and graphical models. I received my bachelor's degree from Sharif University of Technology in Tehran, Iran.
               </Typography>
 
               <Typography 
@@ -81,7 +81,7 @@ const Home = () => {
                   mb: 4,
                 }}
               >
-                Currently, I'm focused on developing novel approaches in Graph Neural Networks, particularly exploring their applications in complex network analysis and optimization problems. I'm also interested in the intersection of machine learning and signal processing on graphs.
+                Currently, I'm focused on developing novel approaches in graph representation learning, particularly leveraging GNNs for complex network analysis and optimization problems. I'm especially interested in the interplay between machine learning and signal processing on graphs, aiming to design scalable, interpretable, and theoretically grounded models.
               </Typography>
 
               <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
