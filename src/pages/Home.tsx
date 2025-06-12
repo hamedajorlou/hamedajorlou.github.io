@@ -29,7 +29,7 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Box sx={{ textAlign: 'right' }}>
+            <Box>
               <Typography 
                 variant="h1" 
                 gutterBottom 
@@ -46,36 +46,37 @@ const Home = () => {
                 Software Engineer & Researcher
               </Typography>
               
-              <Paper
-                elevation={0}
-                sx={{
-                  p: 3,
-                  mb: 4,
-                  borderRadius: 2,
-                  backgroundColor: 'rgba(25, 118, 210, 0.04)',
-                  border: '1px solid',
-                  borderColor: 'primary.light',
+              <Typography 
+                variant="body1" 
+                paragraph 
+                sx={{ 
+                  fontSize: '1.1rem',
+                  color: 'text.primary',
+                  lineHeight: 1.8,
+                  letterSpacing: 0.3,
                   maxWidth: '600px',
-                  ml: 'auto', // Aligns the box to the right
+                  mb: 4,
                 }}
               >
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
-                    fontSize: '1.1rem',
-                    color: 'text.primary',
-                    lineHeight: 1.8,
-                    letterSpacing: 0.3,
-                  }}
-                >
-                  As a Computer Science Ph.D. candidate at the University of Rochester, 
-                  I blend advanced research with practical software engineering. My focus 
-                  lies in developing innovative solutions in machine learning and data science, 
-                  particularly in natural language processing and computer vision.
-                </Typography>
-              </Paper>
+                I'm a second year Ph.D. student at University of Rochester where I'm fortunate enough to work with Prof. Gonzalo Mateos. My main research interests span across GNNs, Optimization and Graphical models.
+              </Typography>
 
-              <Box sx={{ display: 'flex', gap: 2, mb: 4, justifyContent: 'flex-end' }}>
+              <Typography 
+                variant="body1" 
+                paragraph 
+                sx={{ 
+                  fontSize: '1.1rem',
+                  color: 'text.primary',
+                  lineHeight: 1.8,
+                  letterSpacing: 0.3,
+                  maxWidth: '600px',
+                  mb: 4,
+                }}
+              >
+                Currently, I'm focused on developing novel approaches in Graph Neural Networks, particularly exploring their applications in complex network analysis and optimization problems. I'm also interested in the intersection of machine learning and signal processing on graphs.
+              </Typography>
+
+              <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
                 <Button
                   variant="contained"
                   size="large"
@@ -106,7 +107,7 @@ const Home = () => {
                 </Button>
               </Box>
 
-              <Box sx={{ display: 'flex', gap: 2, justifyContent: 'flex-end' }}>
+              <Box sx={{ display: 'flex', gap: 2 }}>
                 <IconLink href="https://github.com/hamedajorlou" icon={<GitHub />} label="GitHub" />
                 <IconLink href="https://linkedin.com/in/hamedajorlou" icon={<LinkedIn />} label="LinkedIn" />
                 <IconLink href="mailto:hajorlou@ur.rochester.edu" icon={<Email />} label="Email" />
