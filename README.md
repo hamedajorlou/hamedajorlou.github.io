@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio Website
 
 This is my personal portfolio website built with React, TypeScript, and Material-UI. It showcases my projects, skills, and professional experience.
@@ -71,3 +72,6 @@ This website is deployed using GitHub Pages. To deploy your changes:
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+=======
+# hamedajorlou.github.io
+>>>>>>> cab6432725b8022cd51cdbfa8463600283280ff4
