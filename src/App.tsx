@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme, CssBaseline, Box } from '@mui/material';
+import { ThemeProvider, createTheme, CssBaseline, Box, Container } from '@mui/material';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -144,15 +144,24 @@ function App() {
             flexGrow: 1,
             pt: '100px',
             minHeight: '100vh',
-            backgroundColor: 'background.default'
+            backgroundColor: 'background.default',
+            px: { xs: 2, md: 3 }
           }}
         >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Container 
+            maxWidth={false} 
+            sx={{ 
+              maxWidth: '1400px',
+              ml: { xs: 0, md: '5%' }
+            }}
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Container>
         </Box>
       </Router>
     </ThemeProvider>
