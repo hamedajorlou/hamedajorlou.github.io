@@ -29,7 +29,7 @@ const Home = () => {
           xs={12} 
           md={7} 
           sx={{
-            pl: { md: 16 }, // Increased left padding (from 8 to 16 for more rightward shift)
+            pl: { md: 32 }, // Significantly increased left padding for more central position
           }}
         >
           <motion.div
@@ -51,7 +51,7 @@ const Home = () => {
                 Welcome! I'm Hamed
               </Typography>
               <Typography variant="h4" color="text.secondary" gutterBottom>
-                Software Engineer & Researcher
+                Research Assistant
               </Typography>
               
               <Typography 
