@@ -18,7 +18,8 @@ const About = () => {
         sx={{ 
           alignItems: 'center',
           justifyContent: 'center',
-          maxWidth: '1200px'
+          maxWidth: '1200px',
+          ml: { xs: 0, md: '15%' }
         }}
       >
         <Grid item xs={12}>

@@ -11,6 +11,7 @@ const Home = () => {
       sx={{ 
         display: 'flex', 
         alignItems: 'center',
+        justifyContent: 'center',
         maxWidth: '1800px'
       }}
     >
@@ -19,8 +20,9 @@ const Home = () => {
         spacing={4} 
         sx={{ 
           alignItems: 'center',
-          pr: { xs: 2, md: 4 },
-          justifyContent: 'flex-end',
+          justifyContent: 'center',
+          maxWidth: '1200px',
+          ml: { xs: 0, md: '15%' }
         }}
       >
         <Grid 
@@ -28,7 +30,7 @@ const Home = () => {
           xs={12} 
           md={7} 
           sx={{
-            pl: { md: 32 },
+            pl: { xs: 2, md: 4 }
           }}
         >
           <motion.div
