@@ -2,17 +2,25 @@ import { Container, Typography, Box, Button, Grid, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { GitHub, LinkedIn, Email } from '@mui/icons-material';
+import profileImage from '../assets/meatUofR.jpeg';
 
 const Home = () => {
   return (
-    <Container maxWidth="lg" sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
+    <Container 
+      maxWidth={false} 
+      sx={{ 
+        height: '100vh', 
+        display: 'flex', 
+        alignItems: 'center',
+        maxWidth: '1800px' // Custom max width to prevent too wide layout
+      }}
+    >
       <Grid 
         container 
         spacing={4} 
         sx={{ 
-          justifyContent: 'flex-end',
           alignItems: 'center',
-          pr: { xs: 0, md: 8 }, // Add padding on the right for medium and larger screens
+          pr: { xs: 2, md: 4 }, // Reduced right padding
         }}
       >
         <Grid item xs={12} md={7}>
@@ -78,10 +86,40 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+            <Box
+              sx={{
+                position: 'relative',
+                height: { xs: '300px', md: '500px' },
+                width: '100%',
+                overflow: 'hidden',
+                borderRadius: 4,
+                boxShadow: 3,
+              }}
+            >
+              <Box
+                component="img"
+                src={profileImage}
+                alt="Hamed Ajorlou"
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
+              />
+            </Box>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <Paper 
               elevation={0}
               sx={{ 
                 p: 4,
+                mt: 4,
                 borderRadius: 4,
                 bgcolor: 'background.paper',
                 border: '1px solid',
