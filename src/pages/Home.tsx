@@ -23,7 +23,7 @@ const Home = () => {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Hi, I'm Hamed
+              Welcome! I'm Hamed
             </Typography>
             <Typography variant="h4" color="text.secondary" gutterBottom>
               Software Engineer & Researcher
