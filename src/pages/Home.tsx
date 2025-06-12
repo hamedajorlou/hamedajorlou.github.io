@@ -10,17 +10,18 @@ const Home = () => {
         container 
         spacing={4} 
         sx={{ 
-          justifyContent: 'center',
+          justifyContent: 'flex-end',
           alignItems: 'center',
+          pr: { xs: 0, md: 8 }, // Add padding on the right for medium and larger screens
         }}
       >
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7}>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ textAlign: 'right' }}>
               <Typography 
                 variant="h1" 
                 gutterBottom 
@@ -41,7 +42,7 @@ const Home = () => {
                 My focus is on creating impactful technology that solves real-world problems.
               </Typography>
 
-              <Box sx={{ display: 'flex', gap: 2, mb: 4, justifyContent: 'center' }}>
+              <Box sx={{ display: 'flex', gap: 2, mb: 4, justifyContent: 'flex-end' }}>
                 <Button
                   variant="contained"
                   size="large"
@@ -62,7 +63,7 @@ const Home = () => {
                 </Button>
               </Box>
 
-              <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+              <Box sx={{ display: 'flex', gap: 2, justifyContent: 'flex-end' }}>
                 <IconLink href="https://github.com/hamedajorlou" icon={<GitHub />} label="GitHub" />
                 <IconLink href="https://linkedin.com/in/hamedajorlou" icon={<LinkedIn />} label="LinkedIn" />
                 <IconLink href="mailto:hajorlou@ur.rochester.edu" icon={<Email />} label="Email" />
@@ -71,7 +72,7 @@ const Home = () => {
           </motion.div>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -87,10 +88,10 @@ const Home = () => {
                 borderColor: 'divider',
               }}
             >
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, textAlign: 'center' }}>
+              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, textAlign: 'right' }}>
                 Technical Expertise
               </Typography>
-              <Grid container spacing={2} justifyContent="center">
+              <Grid container spacing={2} justifyContent="flex-end">
                 {[
                   'Machine Learning',
                   'Data Science',
