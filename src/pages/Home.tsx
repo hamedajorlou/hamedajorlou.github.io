@@ -1,8 +1,10 @@
-import { Container, Typography, Box, Button, Grid, Paper } from '@mui/material';
+import { Container, Typography, Box, Button, Grid, Paper, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 import profileImage from '../assets/meatUofR.jpeg';
+import UofRLogo from '../assets/UofR_logo.svg';
+import NSFLogo from '../assets/NSF_logo.svg';
 
 const Home = () => {
   return (
@@ -234,42 +236,61 @@ const Home = () => {
             </Box>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Paper 
-              elevation={0}
-              sx={{ 
-                p: 4,
-                mt: 4,
-                borderRadius: 4,
-                bgcolor: 'background.paper',
-                border: '1px solid',
-                borderColor: 'divider',
-              }}
+          <Grid item xs={12}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+              <Typography variant="h4" component="h2" gutterBottom align="center">
                 Technical Expertise
               </Typography>
-              <Grid container spacing={2}>
-                {[
-                  'GNNs',
-                  'Optimization',
-                  'Pytorch',
-                  'Deep Learning',
-                  'Git',
-                  'Bash',
-                  'Linux',
-                ].map((skill) => (
-                  <Grid item key={skill}>
-                    <Chip label={skill} />
-                  </Grid>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'center', mb: 4 }}>
+                {['GNNs', 'Optimization', 'Pytorch', 'Deep Learning', 'Git', 'Bash', 'Linux'].map((skill) => (
+                  <Chip
+                    key={skill}
+                    label={skill}
+                    sx={{
+                      backgroundColor: 'rgba(0, 0, 0, 0.08)',
+                      '&:hover': {
+                        backgroundColor: 'rgba(0, 0, 0, 0.12)',
+                      },
+                    }}
+                  />
                 ))}
-              </Grid>
-            </Paper>
-          </motion.div>
+              </Box>
+              <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mt: 4 }}>
+                <Box
+                  component="img"
+                  src={UofRLogo}
+                  alt="University of Rochester"
+                  sx={{
+                    height: '60px',
+                    width: 'auto',
+                    opacity: 0.8,
+                    transition: 'opacity 0.3s ease',
+                    '&:hover': {
+                      opacity: 1,
+                    },
+                  }}
+                />
+                <Box
+                  component="img"
+                  src={NSFLogo}
+                  alt="National Science Foundation"
+                  sx={{
+                    height: '60px',
+                    width: 'auto',
+                    opacity: 0.8,
+                    transition: 'opacity 0.3s ease',
+                    '&:hover': {
+                      opacity: 1,
+                    },
+                  }}
+                />
+              </Box>
+            </motion.div>
+          </Grid>
         </Grid>
       </Grid>
     </Container>
@@ -293,22 +314,6 @@ const IconLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; 
       {label}
     </Button>
   </motion.div>
-);
-
-const Chip = ({ label }: { label: string }) => (
-  <Box
-    sx={{
-      px: 2,
-      py: 1,
-      bgcolor: 'primary.main',
-      color: 'white',
-      borderRadius: 2,
-      fontSize: '0.9rem',
-      fontWeight: 500,
-    }}
-  >
-    {label}
-  </Box>
 );
 
 export default Home; 
