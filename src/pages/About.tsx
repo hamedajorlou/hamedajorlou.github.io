@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Paper, Grid } from '@mui/material';
+import { Container, Typography, Paper, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const About = () => {
