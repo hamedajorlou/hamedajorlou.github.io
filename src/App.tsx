@@ -137,22 +137,22 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ 
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          bgcolor: 'background.default',
-          width: '100%'
-        }}>
-          <Navbar />
-          <Box component="main" sx={{ flexGrow: 1, py: 3, width: '100%' }}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Box>
+        <Navbar />
+        <Box 
+          component="main" 
+          sx={{ 
+            flexGrow: 1,
+            pt: '100px',
+            minHeight: '100vh',
+            backgroundColor: 'background.default'
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </Box>
       </Router>
     </ThemeProvider>
