@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <Container maxWidth="lg" sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', py: 8 }}>
+    <Container maxWidth="lg" sx={{ minHeight: '120vh', display: 'flex', alignItems: 'center', py: 8 }}>
       <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
         <Grid item xs={12}>
           <motion.div
