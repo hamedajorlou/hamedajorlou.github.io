@@ -29,7 +29,7 @@ const Home = () => {
           xs={12} 
           md={7} 
           sx={{
-            pl: { md: 8 }, // Add left padding on medium and up screens
+            pl: { md: 16 }, // Increased left padding (from 8 to 16 for more rightward shift)
           }}
         >
           <motion.div
