@@ -9,7 +9,7 @@ const Home = () => {
     <Container 
       maxWidth={false} 
       sx={{ 
-        height: '100vh', 
+        // height: '100vh',  // Removed to allow scrolling
         display: 'flex', 
         alignItems: 'center',
         maxWidth: '1800px' // Custom max width to prevent too wide layout
@@ -115,7 +115,7 @@ const Home = () => {
                     mb: 2,
                   }}
                 >
-                  University of Rochester • Sep 2023 - Present
+                  University of Rochester, Rochester, NY • Sep 2023 - Present
                 </Typography>
 
                 <Typography 
@@ -137,7 +137,7 @@ const Home = () => {
                     mb: 2,
                   }}
                 >
-                  Sharif University of Technology • Sep 2023 - Jun 2025
+                  University of Rochester, Rochester, NY • Sep 2023 - Jun 2025
                 </Typography>
 
                 <Typography 
@@ -159,7 +159,7 @@ const Home = () => {
                     mb: 2,
                   }}
                 >
-                  Sharif University of Technology • Sep 2018 - Jun 2023
+                  Sharif University of Technology, Tehran, Iran • Sep 2018 - Jun 2023
                 </Typography>
               </Box>
 
