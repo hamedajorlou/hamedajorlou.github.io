@@ -10,8 +10,15 @@ const Navbar = () => {
 
   return (
     <AppBar position="sticky" elevation={0} sx={{ bgcolor: 'background.paper' }}>
-      <Container maxWidth="lg">
-        <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+      <Container maxWidth="lg" sx={{ width: '100%' }}>
+        <Toolbar 
+          disableGutters 
+          sx={{ 
+            justifyContent: 'space-between',
+            width: '100%',
+            px: { xs: 2, md: 4 }
+          }}
+        >
           <Typography
             variant="h6"
             component={RouterLink}
@@ -21,6 +28,7 @@ const Navbar = () => {
               color: 'primary.main',
               fontWeight: 700,
               letterSpacing: 1,
+              minWidth: { xs: '120px', md: '200px' }
             }}
           >
             HAMED AJORLOU
