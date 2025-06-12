@@ -254,14 +254,13 @@ const Home = () => {
               </Typography>
               <Grid container spacing={2} justifyContent="flex-end">
                 {[
-                  'Machine Learning',
-                  'Data Science',
-                  'Python',
-                  'React',
-                  'TypeScript',
-                  'Node.js',
-                  'SQL',
+                  'GNNs',
+                  'Optimization',
+                  'Pytorch',
+                  'Deep Learning',
                   'Git',
+                  'Bash',
+                  'Linux',
                 ].map((skill) => (
                   <Grid item key={skill}>
                     <Chip label={skill} />
