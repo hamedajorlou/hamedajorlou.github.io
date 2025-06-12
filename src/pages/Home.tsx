@@ -127,7 +127,7 @@ const Home = () => {
                     fontWeight: 500,
                   }}
                 >
-                  M.Sc. in Electrical Engineering
+                  M.Sc. in Electrical and Computer Engineering
                 </Typography>
                 <Typography 
                   variant="body2" 
