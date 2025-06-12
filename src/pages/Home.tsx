@@ -21,9 +21,17 @@ const Home = () => {
         sx={{ 
           alignItems: 'center',
           pr: { xs: 2, md: 4 }, // Reduced right padding
+          justifyContent: 'flex-end', // Push content to the right
         }}
       >
-        <Grid item xs={12} md={7}>
+        <Grid 
+          item 
+          xs={12} 
+          md={7} 
+          sx={{
+            pl: { md: 8 }, // Add left padding on medium and up screens
+          }}
+        >
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
