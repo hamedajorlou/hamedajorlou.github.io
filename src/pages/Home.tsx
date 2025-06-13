@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import profileImage from '../assets/profile.jpg';
+import profileImage from '../assets/meatUofR.jpeg';
 import UofRLogo from '../assets/UofR_logo.svg';
 import NSFLogo from '../assets/NSF_logo.svg';
 // import UofRLogo from '../assets/UofR_logo.svg';
