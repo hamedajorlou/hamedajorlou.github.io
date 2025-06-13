@@ -48,10 +48,13 @@ const Home: React.FC = () => {
                 sx={{ 
                   fontWeight: 600,
                   letterSpacing: '0.5px',
-                  color: 'text.primary'
+                  color: 'text.primary',
+                  borderBottom: '2px solid',
+                  borderColor: 'primary.main',
+                  pb: 1
                 }}
               >
-                Hamed Ajorlou
+                Hamed Ajorlou - Test Change
               </Typography>
               <Typography 
                 variant="h6" 
