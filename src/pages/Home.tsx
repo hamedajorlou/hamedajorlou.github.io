@@ -33,7 +33,7 @@ const Home = () => {
                 HAMED AJORLOU
               </Typography>
               <Typography variant="h4" color="text.secondary" gutterBottom>
-                Ph.D. Candidate
+                Graduate Research Assistant
               </Typography>
               
               <Typography 
@@ -48,8 +48,7 @@ const Home = () => {
                   mb: 4,
                 }}
               >
-              I'm a second-year Ph.D. student at the University of Rochester, advised by Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline' }}>Gonzalo Mateos</a>. My research interests lie at the intersection of Graph Neural Networks (GNNs), optimization, and graphical models. I received my bachelor's degree from Sharif University of Technology in Tehran, Iran.
-
+                I'm a second-year Ph.D. student at the University of Rochester, advised by Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank" rel="noopener noreferrer" style={{ color: '#1976d2', textDecoration: 'underline' }}>Gonzalo Mateos</a>. My research interests lie at the intersection of Graph Neural Networks (GNNs), optimization, and graphical models. I received my bachelor's degree from Sharif University of Technology in Tehran, Iran.
               </Typography>
 
               <Typography 
@@ -64,8 +63,7 @@ const Home = () => {
                   mb: 4,
                 }}
               >
-              Currently, I'm focused on developing novel approaches in graph representation learning, particularly leveraging GNNs for complex network analysis and optimization problems. I'm especially interested in the interplay between machine learning and signal processing on graphs, aiming to design scalable, interpretable, and theoretically grounded models.
-
+                Currently, I'm focused on developing novel approaches in graph representation learning, particularly leveraging GNNs for complex network analysis and optimization problems. I'm especially interested in the interplay between machine learning and signal processing on graphs, aiming to design scalable, interpretable, and theoretically grounded models.
               </Typography>
 
               <Typography 
