@@ -22,11 +22,9 @@ const Home = () => {
                 variant="h1" 
                 gutterBottom 
                 sx={{ 
-                  fontWeight: 800,
-                  fontSize: '3.5rem',
-                  background: 'linear-gradient(45deg, #FF0000, #0000FF)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                  fontWeight: 900,
+                  fontSize: '4rem',
+                  color: '#000000',
                   mb: 3
                 }}
               >
@@ -40,7 +38,7 @@ const Home = () => {
                 variant="body1" 
                 paragraph 
                 sx={{ 
-                  fontSize: '1.1rem',
+                  fontSize: '1.2rem',
                   color: 'text.primary',
                   lineHeight: 1.8,
                   letterSpacing: 0.3,
@@ -55,7 +53,7 @@ const Home = () => {
                 variant="body1" 
                 paragraph 
                 sx={{ 
-                  fontSize: '1.1rem',
+                  fontSize: '1.2rem',
                   color: 'text.primary',
                   lineHeight: 1.8,
                   letterSpacing: 0.3,
