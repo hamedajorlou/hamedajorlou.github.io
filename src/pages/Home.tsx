@@ -61,7 +61,8 @@ const Home = () => {
                   mb: 4,
                 }}
               >
-                Hello 
+              Currently, I'm focused on developing novel approaches in graph representation learning, particularly leveraging GNNs for complex network analysis and optimization problems. I'm especially interested in the interplay between machine learning and signal processing on graphs, aiming to design scalable, interpretable, and theoretically grounded models.
+
               </Typography>
 
               <Typography 
