@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/', // Remove repository name since we're using username.github.io
+  base: '/hamedajorlou.github.io/', // Add repository name for proper asset loading
   plugins: [react()],
 })
