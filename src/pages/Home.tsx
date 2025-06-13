@@ -6,6 +6,7 @@ import profileImage from '../assets/meatUofR.jpeg';
 import UofRLogo from '../assets/UofR_logo.svg';
 import NSFLogo from '../assets/NSF_logo.svg';
 
+// Home page component
 const Home = () => {
   return (
     <Container maxWidth={false} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', maxWidth: '1800px' }}>
