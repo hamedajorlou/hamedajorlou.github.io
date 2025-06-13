@@ -22,13 +22,15 @@ const Home = () => {
                 variant="h1" 
                 gutterBottom 
                 sx={{ 
-                  fontWeight: 700,
-                  background: 'linear-gradient(45deg, #1976d2, #9c27b0)',
+                  fontWeight: 800,
+                  fontSize: '3.5rem',
+                  background: 'linear-gradient(45deg, #FF0000, #0000FF)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
+                  mb: 3
                 }}
               >
-                Hamed Ajorlou
+                HAMED AJORLOU
               </Typography>
               <Typography variant="h4" color="text.secondary" gutterBottom>
                 Ph.D. Candidate
