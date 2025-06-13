@@ -114,6 +114,8 @@ const Home = () => {
               elevation={0}
               sx={{ 
                 p: 3,
+                width: '100%',
+                maxWidth: 400,
                 borderRadius: 4,
                 bgcolor: 'background.paper',
                 border: '1px solid',
