@@ -140,7 +140,7 @@ const Home = () => {
                     mb: 2,
                   }}
                 >
-                  Sharif University of Technology, Tehran, Iran • Sep 2018 - Jun 2023
+                  Sharif University of Technology, Tehran, Iran • Aug 2018 - Jun 2023
                 </Typography>
               </Box>
 
