@@ -6,7 +6,7 @@ function Home() {
   return (
     <Container maxWidth="md" sx={{ py: 4 }}>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={7}>
           {/* Header */}
           <Typography variant="h3" component="h1" gutterBottom>
             Hamed Ajorlou
@@ -63,7 +63,7 @@ function Home() {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={5}>
           <Box
             component="img"
             src={profileImage}
@@ -73,6 +73,9 @@ function Home() {
               height: 'auto',
               borderRadius: 2,
               boxShadow: 3,
+              maxWidth: '500px',
+              display: 'block',
+              margin: '0 auto'
             }}
           />
         </Grid>
