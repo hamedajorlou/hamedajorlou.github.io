@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             Graduate Research Assistant
           </Typography>
           <Typography variant="body1" paragraph>
-            I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. Gonzalo Mateos. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
+            I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank" rel="noopener noreferrer">Gonzalo Mateos</a>. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
           </Typography>
           <Typography variant="body1" paragraph>
             I am particularly interested in developing efficient algorithms for large-scale graph processing and exploring the theoretical foundations of GNNs.
@@ -39,10 +39,8 @@ const Home: React.FC = () => {
           </Typography>
           <Typography variant="body1" component="ul" sx={{ pl: 2 }}>
             <li>Graph Neural Networks</li>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
+            <li>Topology Inference</li>
             <li>Optimization</li>
-            <li>Data Analysis</li>
           </Typography>
         </Grid>
       </Grid>
