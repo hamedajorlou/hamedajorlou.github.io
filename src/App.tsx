@@ -94,7 +94,7 @@ function Publications() {
           Journal Articles
         </Typography>
         <Typography variant="body1" paragraph>
-          • H. Ajorlou, G. Mateos, "Graph Neural Networks for Optimization," Journal of Machine Learning Research, 2023
+          • S. Rey, H. Ajorlou, G. Mateos, "Directed Acyclic Graph Convolutional Networks," IEEE Transactions on Signal Processing, 2023
         </Typography>
         <Typography variant="body1" paragraph>
           • H. Ajorlou, G. Mateos, "Large-Scale Graph Processing with GNNs," IEEE Transactions on Neural Networks, 2022
