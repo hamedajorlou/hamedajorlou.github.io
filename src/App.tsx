@@ -102,12 +102,52 @@ function Publications() {
           <Typography variant="h6" gutterBottom>
             Presentations
           </Typography>
-          <Typography variant="body1" paragraph>
-            • Presented at the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024
-          </Typography>
-          <Typography variant="body1" paragraph>
-            • Presented at the University of Rochester ECE Department Seminar Series, 2024
-          </Typography>
+          <Box sx={{ 
+            position: 'relative',
+            pl: 2,
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: '2px',
+              backgroundColor: 'primary.main',
+            }
+          }}>
+            <Box sx={{ 
+              position: 'relative',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                left: -2,
+                top: '50%',
+                width: '10px',
+                height: '2px',
+                backgroundColor: 'primary.main',
+              }
+            }}>
+              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
+                IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024
+              </Typography>
+            </Box>
+            <Box sx={{ 
+              position: 'relative',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                left: -2,
+                top: '50%',
+                width: '10px',
+                height: '2px',
+                backgroundColor: 'primary.main',
+              }
+            }}>
+              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
+                University of Rochester ECE Department Seminar Series, 2024
+              </Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Container>
