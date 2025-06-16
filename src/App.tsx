@@ -97,6 +97,18 @@ function Publications() {
         <Typography variant="body1" paragraph>
           • S. Rey, H. Ajorlou, G. Mateos, "Directed Acyclic Graph Convolutional Networks," IEEE Transactions on Signal Processing, June 2025
         </Typography>
+        
+        <Box sx={{ mt: 4, ml: 2 }}>
+          <Typography variant="h6" gutterBottom>
+            Presentations
+          </Typography>
+          <Typography variant="body1" paragraph>
+            • Presented at the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024
+          </Typography>
+          <Typography variant="body1" paragraph>
+            • Presented at the University of Rochester ECE Department Seminar Series, 2024
+          </Typography>
+        </Box>
       </Box>
     </Container>
   );
