@@ -26,7 +26,7 @@ function Home() {
               About
             </Typography>
             <Typography variant="body1" paragraph>
-              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</a>. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
+              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</a>. My research focuses on Graph Neural Networks (GNNs), and their applications.
             </Typography>
             <Typography variant="body1" paragraph>
               I am particularly interested in developing efficient algorithms for large-scale graph processing and exploring the theoretical foundations of GNNs.
@@ -160,7 +160,7 @@ function Publications() {
               }
             }}>
               <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-              2025 Finger Lakes Science and Technology Showcase, April 2025
+                Finger Lakes Science and Technology Showcase, April 2025
               </Typography>
             </Box>
           </Box>
