@@ -59,7 +59,7 @@ function Home() {
               GitHub: <Link href="https://github.com/hamedajorlou" target="_blank">github.com/hamedajorlou</Link>
             </Typography>
             <Typography variant="body1" paragraph>
-              LinkedIn: <Link href="https://www.linkedin.com/in/hamed-ajorlou/" target="_blank">linkedin.com/in/hamed-ajorlou</Link>
+              Google Scholar: <Link href="https://scholar.google.com/citations?user=6QkPzJwAAAAJ" target="_blank">Google Scholar Profile</Link>
             </Typography>
           </Box>
         </Grid>
