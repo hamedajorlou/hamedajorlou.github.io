@@ -100,7 +100,8 @@ function Publications() {
         
         <Box sx={{ mt: 4, ml: 2 }}>
           <Typography variant="h6" gutterBottom>
-            Presentations
+            {/* Sketch a branch line from the journal article to the presentations below */}
+            {/* The branch line is visually represented by the vertical line and connecting horizontal lines in the sx of the parent and child Boxes below */}
           </Typography>
           <Box sx={{ 
             position: 'relative',
@@ -128,7 +129,7 @@ function Publications() {
               }
             }}>
               <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024
+                Asilomar Conference on Signals, Systems, and Computers, October 2024
               </Typography>
             </Box>
             <Box sx={{ 
@@ -144,7 +145,7 @@ function Publications() {
               }
             }}>
               <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                University of Rochester ECE Department Seminar Series, 2024
+                University of Rochester Graduate Research Day, April 2024
               </Typography>
             </Box>
           </Box>
