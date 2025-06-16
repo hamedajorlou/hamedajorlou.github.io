@@ -160,7 +160,7 @@ function Publications() {
               }
             }}>
               <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                Finger Lakes Research Symposium, April 2025
+              2025 Finger Lakes Science and Technology Showcase, April 2025
               </Typography>
             </Box>
           </Box>
