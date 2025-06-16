@@ -59,11 +59,11 @@ function Home() {
               GitHub: <Link href="https://github.com/hamedajorlou" target="_blank">github.com/hamedajorlou</Link>
             </Typography>
             <Typography variant="body1" paragraph>
-              Google Scholar: <Link href="https://scholar.google.com/citations?user=6QkPzJwAAAAJ" target="_blank">Google Scholar Profile</Link>
+              Google Scholar: <Link href="https://scholar.google.com/citations?user=f8i-0EYAAAAJ&hl=en" target="_blank">Google Scholar Profile</Link>
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={13} md={6}>
           <Box
             component="img"
             src={profileImage}
