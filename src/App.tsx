@@ -94,10 +94,7 @@ function Publications() {
           Journal Articles
         </Typography>
         <Typography variant="body1" paragraph>
-          • S. Rey, H. Ajorlou, G. Mateos, "Directed Acyclic Graph Convolutional Networks," IEEE Transactions on Signal Processing, 2023
-        </Typography>
-        <Typography variant="body1" paragraph>
-          • H. Ajorlou, G. Mateos, "Large-Scale Graph Processing with GNNs," IEEE Transactions on Neural Networks, 2022
+          • S. Rey, H. Ajorlou, G. Mateos, "Directed Acyclic Graph Convolutional Networks," IEEE Transactions on Signal Processing, June 2025
         </Typography>
       </Box>
     </Container>
