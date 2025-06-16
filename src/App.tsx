@@ -63,7 +63,7 @@ function Home() {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={13} md={6}>
+        <Grid item xs={12} md={6}>
           <Box
             component="img"
             src={profileImage}
