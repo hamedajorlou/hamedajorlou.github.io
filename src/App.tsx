@@ -99,9 +99,8 @@ function Publications() {
         </Typography>
         
         <Box sx={{ mt: 4, ml: 2 }}>
-          <Typography variant="h6" gutterBottom>
-            {/* Sketch a branch line from the journal article to the presentations below */}
-            {/* The branch line is visually represented by the vertical line and connecting horizontal lines in the sx of the parent and child Boxes below */}
+          <Typography variant="h6" gutterBottom sx={{ mb: 0, pb: 0 }}>
+            {/* Branch lines are now closer to the journal article above */}
           </Typography>
           <Box sx={{ 
             position: 'relative',
