@@ -144,7 +144,23 @@ function Publications() {
               }
             }}>
               <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                University of Rochester Graduate Research Day, April 2024
+                University of Rochester Graduate Research Day, March 2025
+              </Typography>
+            </Box>
+            <Box sx={{ 
+              position: 'relative',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                left: -2,
+                top: '50%',
+                width: '10px',
+                height: '2px',
+                backgroundColor: 'primary.main',
+              }
+            }}>
+              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
+                Finger Lakes Research Symposium, April 2025
               </Typography>
             </Box>
           </Box>
