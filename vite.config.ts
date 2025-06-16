@@ -5,4 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/', // Changed to root path since we're using username.github.io
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    sourcemap: true
+  }
 })
