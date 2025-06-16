@@ -1,54 +1,40 @@
-import { Container, Typography, Box, Grid } from '@mui/material';
-import { motion } from 'framer-motion';
+import { Typography, Paper, Box, Link } from '@mui/material';
 
 const Contact = () => {
   return (
-    <Container 
-      maxWidth={false} 
-      sx={{ 
-        display: 'flex', 
-        alignItems: 'center',
-        justifyContent: 'center',
-        maxWidth: '1800px'
-      }}
-    >
-      <Grid 
-        container 
-        spacing={4} 
-        sx={{ 
-          alignItems: 'center',
-          justifyContent: 'center',
-          maxWidth: '1200px',
-          ml: { xs: 0, md: '15%' }
-        }}
-      >
-        <Grid item xs={12}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Typography variant="h3" component="h1" gutterBottom align="center">
-              Contact Me
-            </Typography>
-          </motion.div>
-        </Grid>
-
-        <Grid item xs={12} md={8}>
-          <Box sx={{ mt: 4 }}>
-            <Typography variant="body1" paragraph>
-              Email: <a href="mailto:hajorlou@ur.rochester.edu" style={{ color: '#1976d2', textDecoration: 'underline' }}>hajorlou@ur.rochester.edu</a>
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Office: 701 Computer Science Building
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Phone: +1 (585) 490-6184
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-    </Container>
+    <div>
+      <Typography variant="h1" gutterBottom>
+        Contact
+      </Typography>
+      <Paper elevation={0} sx={{ p: 3 }}>
+        <Typography variant="body1" paragraph>
+          Feel free to reach out to me through any of the following channels:
+        </Typography>
+        <Box sx={{ mt: 2 }}>
+          <Typography variant="body1" paragraph>
+            <strong>Email:</strong>{' '}
+            <Link href="mailto:hajorlou@ur.rochester.edu">
+              hajorlou@ur.rochester.edu
+            </Link>
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>Office:</strong> University of Rochester, Department of Electrical and Computer Engineering
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>GitHub:</strong>{' '}
+            <Link href="https://github.com/hamedajorlou" target="_blank">
+              github.com/hamedajorlou
+            </Link>
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>LinkedIn:</strong>{' '}
+            <Link href="https://www.linkedin.com/in/hamed-ajorlou/" target="_blank">
+              linkedin.com/in/hamed-ajorlou
+            </Link>
+          </Typography>
+        </Box>
+      </Paper>
+    </div>
   );
 };
 
