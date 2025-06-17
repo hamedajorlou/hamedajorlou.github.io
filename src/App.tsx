@@ -26,11 +26,52 @@ function Home() {
               About
             </Typography>
             <Typography variant="body1" paragraph>
-              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</a>. My research focuses on Graph Neural Networks (GNNs), and their applications.
+              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</a>. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
             </Typography>
             <Typography variant="body1" paragraph>
               I am particularly interested in developing efficient algorithms for large-scale graph processing and exploring the theoretical foundations of GNNs.
             </Typography>
+          </Box>
+
+          {/* Education */}
+          <Box sx={{ my: 4 }}>
+            <Typography variant="h4" gutterBottom>
+              Education
+            </Typography>
+            <Box sx={{ pl: 2 }}>
+              <Typography variant="h6" gutterBottom>
+                University of Rochester
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Ph.D. in Electrical and Computer Engineering
+                <br />
+                <Typography component="span" variant="body2" color="text.secondary">
+                  2023- Present
+                </Typography>
+              </Typography>
+
+              <Typography variant="h6" gutterBottom>
+                University of Rochester
+              </Typography>
+              <Typography variant="body1" paragraph>
+                M.Sc. in Electrical and Computer Engineering
+                <br />
+                <Typography component="span" variant="body2" color="text.secondary">
+                  2023 - 2025
+                </Typography>
+              </Typography>
+
+              <Typography variant="h6" gutterBottom>
+                Sharif University of Technology
+              </Typography>
+              <Typography variant="body1" paragraph>
+                B.Sc. in Electrical Engineering
+                <br />
+                <Typography component="span" variant="body2" color="text.secondary">
+                  2018 - 2023
+                </Typography>
+              </Typography>
+            </Box>
           </Box>
 
           {/* Research Interests */}
