@@ -33,47 +33,6 @@ function Home() {
             </Typography>
           </Box>
 
-          {/* Education */}
-          <Box sx={{ my: 4 }}>
-            <Typography variant="h4" gutterBottom>
-              Education
-            </Typography>
-            <Box sx={{ pl: 2 }}>
-              <Typography variant="h6" gutterBottom>
-                University of Rochester
-              </Typography>
-              <Typography variant="body1" paragraph>
-                Ph.D. in Electrical and Computer Engineering
-                <br />
-                <Typography component="span" variant="body2" color="text.secondary">
-                  2023- Present
-                </Typography>
-              </Typography>
-
-              <Typography variant="h6" gutterBottom>
-                University of Rochester
-              </Typography>
-              <Typography variant="body1" paragraph>
-                M.Sc. in Electrical and Computer Engineering
-                <br />
-                <Typography component="span" variant="body2" color="text.secondary">
-                  2023 - 2025
-                </Typography>
-              </Typography>
-
-              <Typography variant="h6" gutterBottom>
-                Sharif University of Technology
-              </Typography>
-              <Typography variant="body1" paragraph>
-                B.Sc. in Electrical Engineering
-                <br />
-                <Typography component="span" variant="body2" color="text.secondary">
-                  2018 - 2023
-                </Typography>
-              </Typography>
-            </Box>
-          </Box>
-
           {/* Research Interests */}
           <Box sx={{ my: 4 }}>
             <Typography variant="h4" gutterBottom>
@@ -84,6 +43,49 @@ function Home() {
               <li>Topology Inference</li>
               <li>Optimization</li>
             </Typography>
+          </Box>
+
+          <Divider sx={{ my: 3 }} />
+
+          {/* Education */}
+          <Box sx={{ my: 3 }}>
+            <Typography variant="h5" gutterBottom>
+              Education
+            </Typography>
+            <Box sx={{ pl: 2 }}>
+              <Typography variant="subtitle1" gutterBottom>
+                University of Rochester
+              </Typography>
+              <Typography variant="body2" paragraph>
+                Ph.D. in Electrical and Computer Engineering
+                <br />
+                <Typography component="span" variant="body2" color="text.secondary">
+                  2023 - Present
+                </Typography>
+              </Typography>
+
+              <Typography variant="subtitle1" gutterBottom>
+                University of Rochester
+              </Typography>
+              <Typography variant="body2" paragraph>
+                M.Sc. in Electrical and Computer Engineering
+                <br />
+                <Typography component="span" variant="body2" color="text.secondary">
+                  2023 - 2025
+                </Typography>
+              </Typography>
+
+              <Typography variant="subtitle1" gutterBottom>
+                Sharif University of Technology
+              </Typography>
+              <Typography variant="body2" paragraph>
+                B.Sc. in Electrical Engineering
+                <br />
+                <Typography component="span" variant="body2" color="text.secondary">
+                  2018 - 2023
+                </Typography>
+              </Typography>
+            </Box>
           </Box>
 
           <Divider sx={{ my: 3 }} />
