@@ -17,7 +17,7 @@ function Home() {
           <Typography variant="subtitle1" color="text.secondary" gutterBottom>
             University of Rochester
           </Typography>
-
+          
           <Divider sx={{ my: 3 }} />
 
           {/* About */}
@@ -26,7 +26,7 @@ function Home() {
               About
             </Typography>
             <Typography variant="body1" paragraph>
-              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <Link href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</Link>. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
+              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <a href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</a>. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
             </Typography>
             <Typography variant="body1" paragraph>
               I am particularly interested in developing efficient algorithms for large-scale graph processing and exploring the theoretical foundations of GNNs.
@@ -118,7 +118,7 @@ function Home() {
               boxShadow: 3,
               maxWidth: '500px',
               display: 'block',
-              margin: '0 auto',
+              margin: '0 auto'
             }}
           />
         </Grid>
@@ -209,15 +209,6 @@ function Publications() {
           </Box>
         </Box>
       </Box>
-      
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h5" gutterBottom>
-          Projects
-        </Typography>
-        <Typography variant="body1" paragraph>
-          • <strong>BUILD</strong> - A comprehensive platform for building and managing research projects, featuring collaborative tools and version control for academic research workflows.
-        </Typography>
-      </Box>
     </Container>
   );
 }
@@ -267,3 +258,6 @@ function App() {
 }
 
 export default App;
+
+
+
