@@ -212,6 +212,15 @@ function Publications() {
       
       <Box sx={{ my: 4 }}>
         <Typography variant="h5" gutterBottom>
+          Conference Papers
+        </Typography>
+        <Typography variant="body1" paragraph>
+          • H. Ajorlou, S. Rey, G. Leus, G. Mateos, A. Garcia Marques, "BUILD: Bottom-Up Inference of Linear DAGs," submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2025
+        </Typography>
+      </Box>
+      
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h5" gutterBottom>
           Projects
         </Typography>
         <Typography variant="body1" paragraph>
