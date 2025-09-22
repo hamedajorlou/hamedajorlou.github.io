@@ -215,17 +215,44 @@ function Publications() {
           Conference Papers
         </Typography>
         <Typography variant="body1" paragraph>
-          • H. Ajorlou, S. Rey, G. Leus, G. Mateos, A. Garcia Marques, "BUILD: Bottom-Up Inference of Linear DAGs," submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2025
+          • H. Ajorlou, S. Rey, G. Leus, G. Mateos, A. Garcia Marques, "BUILD: Bottom-Up Inference of Linear DAGs," submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026
         </Typography>
-      </Box>
-      
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h5" gutterBottom>
-          Projects
-        </Typography>
-        <Typography variant="body1" paragraph>
-          • <strong>BUILD</strong> - A comprehensive platform for building and managing research projects, featuring collaborative tools and version control for academic research workflows.
-        </Typography>
+        
+        <Box sx={{ mt: 4, ml: 2 }}>
+          <Typography variant="h6" gutterBottom sx={{ mb: 0, pb: 0 }}>
+            {/* Branch lines are now closer to the conference paper above */}
+          </Typography>
+          <Box sx={{ 
+            position: 'relative',
+            pl: 2,
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: '2px',
+              backgroundColor: 'primary.main',
+            }
+          }}>
+            <Box sx={{ 
+              position: 'relative',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                left: -2,
+                top: '50%',
+                width: '10px',
+                height: '2px',
+                backgroundColor: 'primary.main',
+              }
+            }}>
+              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
+                ICASSP 2026
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Container>
   );
