@@ -215,7 +215,7 @@ function Publications() {
           Conference Papers
         </Typography>
         <Typography variant="body1" paragraph>
-          • H. Ajorlou, S. Rey, G. Leus, G. Mateos, A. Garcia Marques, "BUILD: Bottom-Up Inference of Linear DAGs," submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026
+          • H. Ajorlou, S. Rey, G. Mateos, G. Leus, A. Garcia Marques, "BUILD: Bottom-Up Inference of Linear DAGs," submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026
         </Typography>
         
         <Box sx={{ mt: 4, ml: 2 }}>
@@ -248,7 +248,7 @@ function Publications() {
               }
             }}>
               <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                ICASSP 2026
+                IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), May 2026
               </Typography>
             </Box>
           </Box>
