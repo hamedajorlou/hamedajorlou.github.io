@@ -1,4 +1,7 @@
-import { Box, Container, Typography, Link, Divider, Grid } from '@mui/material';
+import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack } from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SchoolIcon from '@mui/icons-material/School';
 import profileImage from './assets/meatUofR.jpeg';
 
 function App() {
@@ -62,6 +65,17 @@ function App() {
               margin: '0 auto',
             }}
           />
+          <Stack direction="row" spacing={3} justifyContent="center" sx={{ mt: 2 }}>
+            <IconButton component="a" href="mailto:hajorlou@ur.rochester.edu" sx={{ color: '#222' }}>
+              <EmailIcon sx={{ fontSize: 30 }} />
+            </IconButton>
+            <IconButton component="a" href="https://github.com/hamedajorlou" target="_blank" sx={{ color: '#222' }}>
+              <GitHubIcon sx={{ fontSize: 30 }} />
+            </IconButton>
+            <IconButton component="a" href="https://scholar.google.com/citations?user=f8i-0EYAAAAJ&hl=en" target="_blank" sx={{ color: '#222' }}>
+              <SchoolIcon sx={{ fontSize: 30 }} />
+            </IconButton>
+          </Stack>
         </Grid>
       </Grid>
 
@@ -117,15 +131,6 @@ function App() {
         </Typography>
       </Box>
 
-      <Divider sx={{ my: 4 }} />
-
-      <Typography variant="body1" sx={{ lineHeight: 1.8, textAlign: 'center', pb: 2 }}>
-        <Link href="mailto:hajorlou@ur.rochester.edu" sx={{ color: 'inherit' }}>hajorlou@ur.rochester.edu</Link>
-        {' '}&middot;{' '}
-        <Link href="https://github.com/hamedajorlou" target="_blank" sx={{ color: 'inherit' }}>GitHub</Link>
-        {' '}&middot;{' '}
-        <Link href="https://scholar.google.com/citations?user=f8i-0EYAAAAJ&hl=en" target="_blank" sx={{ color: 'inherit' }}>Google Scholar</Link>
-      </Typography>
     </Container>
   );
 }
