@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Link, Divider, Grid, AppBar, Toolbar, Button } from '@mui/material';
-import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
+import { Box, Container, Typography, Link, Divider, Grid, AppBar, Toolbar } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import profileImage from './assets/meatUofR.jpeg';
 
 function Home() {
@@ -26,9 +26,9 @@ function Home() {
               About
             </Typography>
             <Typography variant="body1" paragraph>
-              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof. <Link href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</Link>. My research focuses on Graph Neural Networks (GNNs) and their applications in optimization problems.
-            </Typography>
-            <Typography variant="body1" paragraph>
+              I am a Graduate Research Assistant at the University of Rochester, working under the supervision of Prof.{' '}
+              <Link href="https://www.hajim.rochester.edu/ece/sites/gmateos/" target="_blank">Gonzalo Mateos</Link>.
+              My research focuses on Graph Neural Networks (GNNs), topology inference and causal structure learning.
               I am particularly interested in developing efficient algorithms for large-scale graph processing and exploring the theoretical foundations of GNNs.
             </Typography>
           </Box>
@@ -57,10 +57,10 @@ function Home() {
                 University of Rochester
               </Typography>
               <Typography variant="body2" paragraph>
-                Ph.D. in Electrical and Computer Engineering
+                Ph.D. in Electrical Engineering
                 <br />
                 <Typography component="span" variant="body2" color="text.secondary">
-                  2023 - Present
+                  2023 – Present
                 </Typography>
               </Typography>
 
@@ -68,10 +68,10 @@ function Home() {
                 University of Rochester
               </Typography>
               <Typography variant="body2" paragraph>
-                M.Sc. in Electrical and Computer Engineering
+                M.Sc. in Electrical Engineering
                 <br />
                 <Typography component="span" variant="body2" color="text.secondary">
-                  2023 - 2025
+                  2023 – 2025
                 </Typography>
               </Typography>
 
@@ -82,7 +82,7 @@ function Home() {
                 B.Sc. in Electrical Engineering
                 <br />
                 <Typography component="span" variant="body2" color="text.secondary">
-                  2018 - 2023
+                  2018 – 2023
                 </Typography>
               </Typography>
             </Box>
@@ -123,151 +123,78 @@ function Home() {
           />
         </Grid>
       </Grid>
-    </Container>
-  );
-}
 
-function Publications() {
-  return (
-    <Container maxWidth="md" sx={{ py: 4 }}>
-      <Typography variant="h3" gutterBottom>
-        Publications
-      </Typography>
+      <Divider sx={{ my: 3 }} />
+
+      {/* News / Publications */}
       <Box sx={{ my: 4 }}>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h4" gutterBottom>
+          News
+        </Typography>
+
+        <Typography variant="h6" sx={{ mt: 3, mb: 1 }}>
           Journal Articles
         </Typography>
-        <Typography variant="body1" paragraph>
-          • S. Rey, H. Ajorlou, G. Mateos, "Directed Acyclic Graph Convolutional Networks," IEEE Transactions on Signal Processing, June 2025
-        </Typography>
-        
-        <Box sx={{ mt: 4, ml: 2 }}>
-          <Typography variant="h6" gutterBottom sx={{ mb: 0, pb: 0 }}>
-            {/* Branch lines are now closer to the journal article above */}
+        <Box component="ol" sx={{ pl: 3, '& li': { mb: 1.5 } }}>
+          <Typography component="li" variant="body2">
+            H. Ajorlou, G. Mateos, and M. Tepper, "Online DAG learning from streaming observational data,"{' '}
+            <em>IEEE Trans. Signal Process.</em>, vol. 74, March 2026 (submitted)
           </Typography>
-          <Box sx={{ 
-            position: 'relative',
-            pl: 2,
-            '&::before': {
-              content: '""',
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              bottom: 0,
-              width: '2px',
-              backgroundColor: 'primary.main',
-            }
-          }}>
-            <Box sx={{ 
-              position: 'relative',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                left: -2,
-                top: '50%',
-                width: '10px',
-                height: '2px',
-                backgroundColor: 'primary.main',
-              }
-            }}>
-              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                Asilomar Conference on Signals, Systems, and Computers, October 2024
-              </Typography>
-            </Box>
-            <Box sx={{ 
-              position: 'relative',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                left: -2,
-                top: '50%',
-                width: '10px',
-                height: '2px',
-                backgroundColor: 'primary.main',
-              }
-            }}>
-              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                University of Rochester Graduate Research Day, March 2025
-              </Typography>
-            </Box>
-            <Box sx={{ 
-              position: 'relative',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                left: -2,
-                top: '50%',
-                width: '10px',
-                height: '2px',
-                backgroundColor: 'primary.main',
-              }
-            }}>
-              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                Finger Lakes Science and Technology Showcase, April 2025
-              </Typography>
-            </Box>
-          </Box>
+          <Typography component="li" variant="body2">
+            G. Mateos, S. Rey, H. Ajorlou, and M. Tepper, "Concomitant DAG learning: On the roles of noise adaptivity, sparsity, and non-negativity,"{' '}
+            <em>IEEE Signal Process. Mag.</em>, vol. 43, February 2026 (full paper invited)
+          </Typography>
+          <Typography component="li" variant="body2">
+            S. Rey, H. Ajorlou, and G. Mateos, "Directed acyclic graph convolutional networks,"{' '}
+            <em>IEEE Trans. Signal Process.</em>, vol. 72, June 2025 (revised)
+          </Typography>
         </Box>
-      </Box>
-      
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h5" gutterBottom>
+
+        <Typography variant="h6" sx={{ mt: 3, mb: 1 }}>
           Conference Papers
         </Typography>
-        <Typography variant="body1" paragraph>
-          • H. Ajorlou, S. Rey, G. Mateos, G. Leus, A. Garcia Marques, "BUILD: Bottom-Up Inference of Linear DAGs," submitted to IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026
-        </Typography>
-        
-        <Box sx={{ mt: 4, ml: 2 }}>
-          <Typography variant="h6" gutterBottom sx={{ mb: 0, pb: 0 }}>
-            {/* Branch lines are now closer to the conference paper above */}
+        <Box component="ol" sx={{ pl: 3, '& li': { mb: 1.5 } }}>
+          <Typography component="li" variant="body2">
+            H. Ajorlou, S. Rey, G. Mateos, G. Leus, and A. G. Marques, "BUILD with precision: Bottom-up inference of linear DAGs," in{' '}
+            <em>Proc. Int. Conf. Acoustics, Speech, Signal Process.</em>, Barcelona, Spain, May 4–8, 2026
           </Typography>
-          <Box sx={{ 
-            position: 'relative',
-            pl: 2,
-            '&::before': {
-              content: '""',
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              bottom: 0,
-              width: '2px',
-              backgroundColor: 'primary.main',
-            }
-          }}>
-            <Box sx={{ 
-              position: 'relative',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                left: -2,
-                top: '50%',
-                width: '10px',
-                height: '2px',
-                backgroundColor: 'primary.main',
-              }
-            }}>
-              <Typography variant="body1" paragraph sx={{ pl: 2 }}>
-                IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), May 2026
-              </Typography>
-            </Box>
-          </Box>
+          <Typography component="li" variant="body2">
+            H. Ajorlou, G. Mateos, and L. Ruiz, "Dirichlet meets Horvitz and Thompson: Estimating homophily in large graphs via sampling," in{' '}
+            <em>Proc. Asilomar Conf. on Signals, Systems, Computers</em>, Pacific Grove, CA, October 26–29, 2025
+          </Typography>
+          <Typography component="li" variant="body2">
+            S. Rey, H. Ajorlou, and G. Mateos, "Convolutional learning on directed acyclic graphs," in{' '}
+            <em>Proc. Asilomar Conf. on Signals, Systems, Computers</em>, Pacific Grove, CA, October 27–30, 2024
+          </Typography>
         </Box>
-      </Box>
-    </Container>
-  );
-}
 
-function Blog() {
-  return (
-    <Container maxWidth="md" sx={{ py: 4 }}>
-      <Typography variant="h3" gutterBottom>
-        Blog
-      </Typography>
-      <Box sx={{ my: 4 }}>
-        <Typography variant="body1" paragraph>
-          Coming soon...
+        <Typography variant="h6" sx={{ mt: 3, mb: 1 }}>
+          Workshops
         </Typography>
+        <Box component="ol" sx={{ pl: 3, '& li': { mb: 1.5 } }}>
+          <Typography component="li" variant="body2">
+            S. Rey, H. Ajorlou, and G. Mateos, "DAG convolutional networks," in{' '}
+            <em>NeurIPS New Perspectives in Advancing Graph Machine Learning</em>, San Diego, CA, December 7, 2025
+          </Typography>
+        </Box>
+
+        <Typography variant="h6" sx={{ mt: 3, mb: 1 }}>
+          Presentations at Technical Events
+        </Typography>
+        <Box component="ol" sx={{ pl: 3, '& li': { mb: 1.5 } }}>
+          <Typography component="li" variant="body2">
+            "BUILD with precision: Bottom-up inference of linear DAGs,"{' '}
+            <em>University of Rochester Graduate Research Day</em>, Rochester, NY, April 2, 2026 (Oral)
+          </Typography>
+          <Typography component="li" variant="body2">
+            "Convolutional learning on directed acyclic graphs,"{' '}
+            <em>Finger Lakes Science and Technology Showcase</em>, Rochester, NY, April 24, 2025 (Poster)
+          </Typography>
+          <Typography component="li" variant="body2">
+            "Convolutional learning on directed acyclic graphs,"{' '}
+            <em>University of Rochester Graduate Research Day</em>, Rochester, NY, March 28, 2025 (Poster)
+          </Typography>
+        </Box>
       </Box>
     </Container>
   );
@@ -281,22 +208,11 @@ function App() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Hamed Ajorlou
           </Typography>
-          <Button color="inherit" component={RouterLink} to="/">
-            Home
-          </Button>
-          <Button color="inherit" component={RouterLink} to="/publications">
-            Publications
-          </Button>
-          <Button color="inherit" component={RouterLink} to="/blog">
-            Blog
-          </Button>
         </Toolbar>
       </AppBar>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/publications" element={<Publications />} />
-        <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
   );
