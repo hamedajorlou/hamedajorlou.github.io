@@ -48,7 +48,7 @@ function App() {
             <strong>University of Rochester</strong> — M.Sc. in Electrical Engineering, 2023 – 2025
           </Typography>
           <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }} paragraph>
-            <strong>Sharif University of Technology</strong> — B.Sc. in Electrical Engineering, 2018 – 2023
+            <strong>Sharif University of Technology</strong> — B.Sc. in Electrical Engineering,{' '}<span style={{ whiteSpace: 'nowrap' }}>2018 – 2023</span>
           </Typography>
 
         </Grid>
