@@ -94,19 +94,19 @@ function App() {
         </Typography>
 
         <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
-          <strong>March 2026</strong> — Our paper "Online DAG learning from streaming observational data" (with G. Mateos and M. Tepper) has been submitted to <em>IEEE Transactions on Signal Processing</em>.
-        </Typography>
-
-        <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
-          <strong>February 2026</strong> — Our invited full paper "Concomitant DAG learning: On the roles of noise adaptivity, sparsity, and non-negativity" (with G. Mateos, S. Rey, and M. Tepper) will appear in <em>IEEE Signal Processing Magazine</em>.
-        </Typography>
-
-        <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
           <strong>May 2026</strong> — Our paper "BUILD with precision: Bottom-up inference of linear DAGs" (with S. Rey, G. Mateos, G. Leus, and A. G. Marques) will be presented at <em>ICASSP 2026</em> in Barcelona, Spain.
         </Typography>
 
         <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
           <strong>April 2026</strong> — I will give an oral presentation on "BUILD with precision: Bottom-up inference of linear DAGs" at the <em>University of Rochester Graduate Research Day</em>.
+        </Typography>
+
+        <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
+          <strong>March 2026</strong> — Our paper "Online DAG learning from streaming observational data" (with G. Mateos and M. Tepper) has been submitted to <em>IEEE Transactions on Signal Processing</em>.
+        </Typography>
+
+        <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
+          <strong>February 2026</strong> — Our invited full paper "Concomitant DAG learning: On the roles of noise adaptivity, sparsity, and non-negativity" (with G. Mateos, S. Rey, and M. Tepper) will appear in <em>IEEE Signal Processing Magazine</em>.
         </Typography>
 
         <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
