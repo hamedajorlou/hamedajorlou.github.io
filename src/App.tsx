@@ -1,9 +1,79 @@
-import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack } from '@mui/material';
+import { useState, useRef, useCallback } from 'react';
+import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, LinearProgress } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
 import DescriptionIcon from '@mui/icons-material/Description';
 import profileImage from './assets/meatUofR.jpeg';
+import altImage from './assets/MeatAsilomar.jpeg';
 import uofrLogo from './assets/UofR_logo.svg';
+
+function HoverPhoto() {
+  const [swapped, setSwapped] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [hovering, setHovering] = useState(false);
+  const timerRef = useRef<number | null>(null);
+  const intervalRef = useRef<number | null>(null);
+
+  const clearTimers = useCallback(() => {
+    if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+    if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
+  }, []);
+
+  const handleMouseEnter = () => {
+    setHovering(true);
+    setProgress(0);
+    const start = Date.now();
+    intervalRef.current = window.setInterval(() => {
+      const elapsed = Date.now() - start;
+      setProgress(Math.min((elapsed / 3000) * 100, 100));
+    }, 30);
+    timerRef.current = window.setTimeout(() => {
+      setSwapped(s => !s);
+      setProgress(0);
+      setHovering(false);
+      clearTimers();
+    }, 3000);
+  };
+
+  const handleMouseLeave = () => {
+    clearTimers();
+    setProgress(0);
+    setHovering(false);
+  };
+
+  return (
+    <Box
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      sx={{ maxWidth: '400px', margin: '0 auto', cursor: 'pointer' }}
+    >
+      <Box sx={{ position: 'relative', width: '100%' }}>
+        <Box
+          component="img"
+          src={swapped ? altImage : profileImage}
+          alt="Hamed Ajorlou"
+          sx={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+            transition: 'opacity 0.6s ease',
+          }}
+        />
+      </Box>
+      <LinearProgress
+        variant="determinate"
+        value={progress}
+        sx={{
+          height: 2,
+          opacity: hovering ? 1 : 0,
+          transition: 'opacity 0.3s ease',
+          backgroundColor: '#e0e0e0',
+          '& .MuiLinearProgress-bar': { backgroundColor: '#222' },
+        }}
+      />
+    </Box>
+  );
+}
 
 function App() {
   return (
@@ -66,18 +136,7 @@ function App() {
               mb: 2,
             }}
           />
-          <Box
-            component="img"
-            src={profileImage}
-            alt="Hamed Ajorlou"
-            sx={{
-              width: '100%',
-              height: 'auto',
-              maxWidth: '400px',
-              display: 'block',
-              margin: '0 auto',
-            }}
-          />
+          <HoverPhoto />
           <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', mt: 2 }}>
             <Link href="mailto:hajorlou@ur.rochester.edu" sx={{ color: 'inherit' }}>hajorlou@ur.rochester.edu</Link>
           </Typography>
