@@ -127,18 +127,18 @@ function App() {
 
         </Grid>
         <Grid item xs={12} md={5}>
-          <Box
-            component="img"
-            src={uofrLogo}
-            alt="University of Rochester"
-            sx={{
-              width: '120px',
-              height: 'auto',
-              display: 'block',
-              margin: '0 auto',
-              mb: 2,
-            }}
-          />
+          <Link href="https://www.rochester.edu" target="_blank" sx={{ display: 'block', textAlign: 'center', mb: 2 }}>
+            <Box
+              component="img"
+              src={uofrLogo}
+              alt="University of Rochester"
+              sx={{
+                width: '120px',
+                height: 'auto',
+                display: 'inline-block',
+              }}
+            />
+          </Link>
           <HoverPhoto />
           <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', mt: 2 }}>
             <Link href="mailto:hajorlou@ur.rochester.edu" sx={{ color: 'inherit' }}>hajorlou@ur.rochester.edu</Link>
