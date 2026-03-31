@@ -3,6 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
 import DescriptionIcon from '@mui/icons-material/Description';
 import profileImage from './assets/meatUofR.jpeg';
+import uofrLogo from './assets/UofR_logo.svg';
 
 function App() {
   return (
@@ -53,6 +54,18 @@ function App() {
 
         </Grid>
         <Grid item xs={12} md={5}>
+          <Box
+            component="img"
+            src={uofrLogo}
+            alt="University of Rochester"
+            sx={{
+              width: '120px',
+              height: 'auto',
+              display: 'block',
+              margin: '0 auto',
+              mb: 2,
+            }}
+          />
           <Box
             component="img"
             src={profileImage}
