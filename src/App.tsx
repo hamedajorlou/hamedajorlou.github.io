@@ -11,32 +11,35 @@ function HoverPhoto() {
   const [swapped, setSwapped] = useState(false);
   const [progress, setProgress] = useState(0);
   const [hovering, setHovering] = useState(false);
-  const timerRef = useRef<number | null>(null);
   const intervalRef = useRef<number | null>(null);
+  const startRef = useRef(0);
 
-  const clearTimers = useCallback(() => {
-    if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+  const clearTimer = useCallback(() => {
     if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
+  }, []);
+
+  const startCycle = useCallback(() => {
+    startRef.current = Date.now();
+    intervalRef.current = window.setInterval(() => {
+      const elapsed = Date.now() - startRef.current;
+      if (elapsed >= 3000) {
+        setSwapped(s => !s);
+        startRef.current = Date.now();
+        setProgress(0);
+      } else {
+        setProgress((elapsed / 3000) * 100);
+      }
+    }, 30);
   }, []);
 
   const handleMouseEnter = () => {
     setHovering(true);
     setProgress(0);
-    const start = Date.now();
-    intervalRef.current = window.setInterval(() => {
-      const elapsed = Date.now() - start;
-      setProgress(Math.min((elapsed / 3000) * 100, 100));
-    }, 30);
-    timerRef.current = window.setTimeout(() => {
-      setSwapped(s => !s);
-      setProgress(0);
-      setHovering(false);
-      clearTimers();
-    }, 3000);
+    startCycle();
   };
 
   const handleMouseLeave = () => {
-    clearTimers();
+    clearTimer();
     setProgress(0);
     setHovering(false);
   };
