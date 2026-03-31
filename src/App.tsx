@@ -3,31 +3,59 @@ import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, Lin
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
 import DescriptionIcon from '@mui/icons-material/Description';
-import profileImage from './assets/meatUofR.jpeg';
-import altImage from './assets/MeatAsilomar.jpeg';
+import img1 from './assets/meatUofR.jpeg';
+import img2 from './assets/MeatAsilomar.jpeg';
+import img3 from './assets/meatny.jpg';
 import uofrLogo from './assets/UofR_logo.svg';
 
+const photos = [img1, img2, img3];
+
 function HoverPhoto() {
-  const [swapped, setSwapped] = useState(false);
+  const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [hovering, setHovering] = useState(false);
+  const [fade, setFade] = useState(false);
   const intervalRef = useRef<number | null>(null);
+  const timeoutRef = useRef<number | null>(null);
   const startRef = useRef(0);
 
-  const clearTimer = useCallback(() => {
+  const clearTimers = useCallback(() => {
     if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
+    if (timeoutRef.current) { clearTimeout(timeoutRef.current); timeoutRef.current = null; }
   }, []);
 
   const startCycle = useCallback(() => {
     startRef.current = Date.now();
     intervalRef.current = window.setInterval(() => {
       const elapsed = Date.now() - startRef.current;
-      if (elapsed >= 3000) {
-        setSwapped(s => !s);
-        startRef.current = Date.now();
-        setProgress(0);
-      } else {
-        setProgress((elapsed / 3000) * 100);
+      const p = Math.min((elapsed / 3000) * 100, 100);
+      setProgress(p);
+      if (p >= 100) {
+        clearInterval(intervalRef.current!);
+        intervalRef.current = null;
+        setFade(true);
+        timeoutRef.current = window.setTimeout(() => {
+          setIndex(i => (i + 1) % photos.length);
+          setFade(false);
+          setProgress(0);
+          startRef.current = Date.now();
+          intervalRef.current = window.setInterval(() => {
+            const el = Date.now() - startRef.current;
+            const pp = Math.min((el / 3000) * 100, 100);
+            setProgress(pp);
+            if (pp >= 100) {
+              clearInterval(intervalRef.current!);
+              intervalRef.current = null;
+              setFade(true);
+              timeoutRef.current = window.setTimeout(() => {
+                setIndex(i => (i + 1) % photos.length);
+                setFade(false);
+                setProgress(0);
+                startCycle();
+              }, 500);
+            }
+          }, 30);
+        }, 500);
       }
     }, 30);
   }, []);
@@ -35,13 +63,15 @@ function HoverPhoto() {
   const handleMouseEnter = () => {
     setHovering(true);
     setProgress(0);
+    setFade(false);
     startCycle();
   };
 
   const handleMouseLeave = () => {
-    clearTimer();
+    clearTimers();
     setProgress(0);
     setHovering(false);
+    setFade(false);
   };
 
   return (
@@ -50,19 +80,18 @@ function HoverPhoto() {
       onMouseLeave={handleMouseLeave}
       sx={{ maxWidth: '400px', margin: '0 auto', cursor: 'pointer' }}
     >
-      <Box sx={{ position: 'relative', width: '100%' }}>
-        <Box
-          component="img"
-          src={swapped ? altImage : profileImage}
-          alt="Hamed Ajorlou"
-          sx={{
-            width: '100%',
-            height: 'auto',
-            display: 'block',
-            transition: 'opacity 0.6s ease',
-          }}
-        />
-      </Box>
+      <Box
+        component="img"
+        src={photos[index]}
+        alt="Hamed Ajorlou"
+        sx={{
+          width: '100%',
+          height: 'auto',
+          display: 'block',
+          opacity: fade ? 0 : 1,
+          transition: 'opacity 0.5s ease',
+        }}
+      />
       <LinearProgress
         variant="determinate"
         value={progress}
@@ -71,7 +100,10 @@ function HoverPhoto() {
           opacity: hovering ? 1 : 0,
           transition: 'opacity 0.3s ease',
           backgroundColor: '#e0e0e0',
-          '& .MuiLinearProgress-bar': { backgroundColor: '#222' },
+          '& .MuiLinearProgress-bar': {
+            backgroundColor: '#222',
+            transition: 'none',
+          },
         }}
       />
     </Box>
