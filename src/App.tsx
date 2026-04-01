@@ -5,9 +5,10 @@ import SchoolIcon from '@mui/icons-material/School';
 import DescriptionIcon from '@mui/icons-material/Description';
 import img1 from './assets/meatUofR.jpeg';
 import img2 from './assets/MeatAsilomar.jpeg';
+import img3 from './assets/grad.jpg';
 import uofrLogo from './assets/UofR_logo.svg';
 
-const photos = [img1, img2];
+const photos = [img1, img2, img3];
 
 function HoverPhoto() {
   const [index, setIndex] = useState(0);
