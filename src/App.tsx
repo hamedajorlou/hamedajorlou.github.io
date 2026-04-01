@@ -1,9 +1,94 @@
-import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack } from '@mui/material';
+import { useState, useRef, useCallback } from 'react';
+import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, LinearProgress } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
 import DescriptionIcon from '@mui/icons-material/Description';
-import profileImage from './assets/meatUofR.jpeg';
+import img1 from './assets/meatUofR.jpeg';
+import img2 from './assets/MeatAsilomar.jpeg';
 import uofrLogo from './assets/UofR_logo.svg';
+
+const photos = [img1, img2];
+
+function HoverPhoto() {
+  const [index, setIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [hovering, setHovering] = useState(false);
+  const intervalRef = useRef<number | null>(null);
+  const startRef = useRef(0);
+
+  const clearTimer = useCallback(() => {
+    if (intervalRef.current) { clearInterval(intervalRef.current); intervalRef.current = null; }
+  }, []);
+
+  const startCycle = useCallback(() => {
+    startRef.current = Date.now();
+    setProgress(0);
+    intervalRef.current = window.setInterval(() => {
+      const elapsed = Date.now() - startRef.current;
+      const p = Math.min((elapsed / 3000) * 100, 100);
+      setProgress(p);
+      if (p >= 100) {
+        clearInterval(intervalRef.current!);
+        intervalRef.current = null;
+        setIndex(i => (i + 1) % photos.length);
+        setProgress(0);
+        startRef.current = Date.now();
+        intervalRef.current = window.setInterval(() => {
+          const el = Date.now() - startRef.current;
+          const pp = Math.min((el / 3000) * 100, 100);
+          setProgress(pp);
+          if (pp >= 100) {
+            clearInterval(intervalRef.current!);
+            intervalRef.current = null;
+            setIndex(i => (i + 1) % photos.length);
+            startCycle();
+          }
+        }, 30);
+      }
+    }, 30);
+  }, []);
+
+  const handleMouseEnter = () => {
+    setHovering(true);
+    setProgress(0);
+    startCycle();
+  };
+
+  const handleMouseLeave = () => {
+    clearTimer();
+    setProgress(0);
+    setHovering(false);
+  };
+
+  return (
+    <Box
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      sx={{ maxWidth: '400px', margin: '0 auto', cursor: 'pointer' }}
+    >
+      <Box
+        component="img"
+        src={photos[index]}
+        alt="Hamed Ajorlou"
+        sx={{ width: '100%', height: 'auto', display: 'block' }}
+      />
+      <LinearProgress
+        variant="determinate"
+        value={progress}
+        sx={{
+          height: 2,
+          opacity: hovering ? 1 : 0,
+          transition: 'opacity 0.3s ease',
+          backgroundColor: '#e0e0e0',
+          '& .MuiLinearProgress-bar': {
+            backgroundColor: '#222',
+            transition: 'none',
+          },
+        }}
+      />
+    </Box>
+  );
+}
 
 function App() {
   return (
@@ -66,18 +151,7 @@ function App() {
               }}
             />
           </Link>
-          <Box
-            component="img"
-            src={profileImage}
-            alt="Hamed Ajorlou"
-            sx={{
-              width: '100%',
-              height: 'auto',
-              maxWidth: '400px',
-              display: 'block',
-              margin: '0 auto',
-            }}
-          />
+          <HoverPhoto />
           <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', mt: 2 }}>
             <Link href="mailto:hajorlou@ur.rochester.edu" sx={{ color: 'inherit' }}>hajorlou@ur.rochester.edu</Link>
           </Typography>
