@@ -120,16 +120,26 @@ function App() {
           <Typography variant="h6" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, mt: 3, mb: 1 }}>
             Research Interests
           </Typography>
-          <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
-            Graph Neural Networks &middot; Topology Inference &middot; Optimization
-          </Typography>
-
-          <Typography variant="h6" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, mt: 3, mb: 1 }}>
-            Research Questions
-          </Typography>
           <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }} paragraph>
-            My research is driven by several interconnected questions. Given observational data from nodes in a causal graph, how can we uncover the underlying connectivity — that is, how nodes causally influence one another? Once this structure is known, how can we leverage it to perform downstream tasks with reasonable accuracy? And in settings where only partial observations are available from the overall distribution, how can we infer the parameters of large-scale graphs?
+            My interests lie in Graph Neural Networks, Causal Structure Learning, Topology Inference, and Optimization. My work addresses several questions:
           </Typography>
+          <Box component="ul" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 2, pl: 3, mt: 0, '& li': { mb: 0.5 } }}>
+            <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
+              How can we learn causal graph structure from streaming observational data? [<em>IEEE TSP 2026</em>]
+            </Typography>
+            <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
+              What roles do noise adaptivity, sparsity, and non-negativity play in DAG learning? [<em>IEEE SPM 2026</em>]
+            </Typography>
+            <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
+              How can we efficiently recover causal orderings from the precision matrix? [<em>ICASSP 2026</em>]
+            </Typography>
+            <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
+              How should we design graph convolutions that respect the directed, acyclic nature of causal graphs? [<em>IEEE TSP 2025</em>] [<em>NeurIPS Workshop 2025</em>]
+            </Typography>
+            <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
+              How can we estimate network homophily from partial observations using statistical sampling? [<em>Asilomar 2025</em>]
+            </Typography>
+          </Box>
 
           <Divider sx={{ my: 3 }} />
 
