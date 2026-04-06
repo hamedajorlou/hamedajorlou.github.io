@@ -124,6 +124,13 @@ function App() {
             Graph Neural Networks &middot; Topology Inference &middot; Optimization
           </Typography>
 
+          <Typography variant="h6" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, mt: 3, mb: 1 }}>
+            Research Questions
+          </Typography>
+          <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }} paragraph>
+            My research is driven by several interconnected questions. Given observational data from nodes in a causal graph, how can we uncover the underlying connectivity — that is, how nodes causally influence one another? Once this structure is known, how can we leverage it to perform downstream tasks with reasonable accuracy? And in settings where only partial observations are available from the overall distribution, how can we infer the parameters of large-scale graphs?
+          </Typography>
+
           <Divider sx={{ my: 3 }} />
 
           <Typography variant="h6" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, mb: 1 }}>
