@@ -2,7 +2,6 @@ import { useState, useRef, useCallback } from 'react';
 import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, LinearProgress } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
-import DescriptionIcon from '@mui/icons-material/Description';
 import img1 from './assets/meatUofR.jpeg';
 import img2 from './assets/MeatAsilomar.jpeg';
 import img3 from './assets/grad.jpg';
@@ -115,6 +114,7 @@ function App() {
             My research focuses on Graph Neural Networks (GNNs), topology inference and causal structure learning.
             I am particularly interested in developing efficient algorithms for large-scale graph processing
             and exploring the theoretical foundations of GNNs.
+            Here is my (probably outdated) <Link href="/CV.pdf" target="_blank" sx={{ color: 'inherit' }}>CV</Link>.
           </Typography>
 
           <Typography variant="h6" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, mt: 3, mb: 1 }}>
@@ -184,10 +184,12 @@ function App() {
             <IconButton component="a" href="https://scholar.google.com/citations?user=f8i-0EYAAAAJ&hl=en" target="_blank" sx={{ color: '#222' }}>
               <SchoolIcon sx={{ fontSize: 28 }} />
             </IconButton>
-            <IconButton component="a" href="/CV.pdf" target="_blank" sx={{ color: '#222' }}>
-              <DescriptionIcon sx={{ fontSize: 28 }} />
-            </IconButton>
           </Stack>
+          <Typography variant="body2" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', mt: 2, lineHeight: 1.6, color: 'text.secondary' }}>
+            University of Rochester<br />
+            701 Computer Studies Building<br />
+            Rochester, NY 14627
+          </Typography>
         </Grid>
       </Grid>
 
