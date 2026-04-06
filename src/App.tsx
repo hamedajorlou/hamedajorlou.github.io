@@ -140,6 +140,9 @@ function App() {
               How can we estimate network homophily from partial observations using statistical sampling? [<em>Asilomar 2025</em>]
             </Typography>
           </Box>
+          <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }} paragraph>
+            An ongoing research direction is how the learned causal connectivity can be utilized for downstream tasks with bounded generalization error.
+          </Typography>
 
           <Divider sx={{ my: 3 }} />
 
