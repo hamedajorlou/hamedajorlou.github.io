@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
-import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, LinearProgress } from '@mui/material';
+import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, LinearProgress, Modal } from '@mui/material';
+import { HashRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
 import img1 from './assets/meatUofR.jpeg';
@@ -91,9 +92,105 @@ function HoverPhoto() {
   );
 }
 
-function App() {
+const galleryPhotos = [
+  { src: '/gallery/1B579833-522D-4EB3-AAF5-CDAC86FA57F1.jpeg', caption: '' },
+  { src: '/gallery/456D69DC-C0C7-428B-A4E6-29E6E58686EC.jpeg', caption: '' },
+  { src: '/gallery/4F523043-1318-4F7A-BC40-22E8D7B0088B.jpeg', caption: '' },
+  { src: '/gallery/86111BCD-F086-4DDE-B611-CB8F2191F193.jpeg', caption: '' },
+  { src: '/gallery/86F01118-04DF-46D9-AAE4-7F127B7554AD.jpeg', caption: '' },
+  { src: '/gallery/9F90475D-0680-4F7C-AA87-6AD3165B3239.jpeg', caption: '' },
+  { src: '/gallery/C8237622-DC5C-48C4-ADB2-5EBC94A8C9B0.jpeg', caption: '' },
+];
+
+function Nav() {
   return (
-    <Container maxWidth="md" sx={{ py: 5, fontFamily: '"EB Garamond", Georgia, serif' }}>
+    <Box sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', pt: 3, fontSize: '1.1rem' }}>
+      <Link component={RouterLink} to="/" sx={{ color: 'inherit', mx: 1.5 }}>Home</Link>
+      <span style={{ color: '#888' }}>·</span>
+      <Link component={RouterLink} to="/gallery" sx={{ color: 'inherit', mx: 1.5 }}>Gallery</Link>
+    </Box>
+  );
+}
+
+function Gallery() {
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <Container maxWidth="lg" sx={{ pt: 3, pb: 5, fontFamily: '"EB Garamond", Georgia, serif' }}>
+      <Typography variant="h4" component="h1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, textAlign: 'center', mb: 1 }}>
+        Gallery
+      </Typography>
+      <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', color: 'text.secondary', mb: 4 }}>
+        A small collection from my film photography. Click any image to view it larger.
+      </Typography>
+      <Grid container spacing={2}>
+        {galleryPhotos.map((photo, i) => (
+          <Grid item xs={12} sm={6} md={4} key={i}>
+            <Box
+              onClick={() => setOpen(i)}
+              sx={{
+                cursor: 'pointer',
+                overflow: 'hidden',
+                '&:hover img': { opacity: 0.85 },
+              }}
+            >
+              <Box
+                component="img"
+                src={photo.src}
+                alt={`Photograph ${i + 1}`}
+                sx={{
+                  width: '100%',
+                  height: '280px',
+                  objectFit: 'cover',
+                  display: 'block',
+                  transition: 'opacity 0.3s ease',
+                }}
+              />
+              {photo.caption && (
+                <Typography variant="body2" sx={{ fontFamily: '"EB Garamond", Georgia, serif', mt: 1, color: 'text.secondary', fontStyle: 'italic' }}>
+                  {photo.caption}
+                </Typography>
+              )}
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+      <Modal open={open !== null} onClose={() => setOpen(null)} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Box
+          onClick={() => setOpen(null)}
+          sx={{
+            outline: 'none',
+            maxWidth: '95vw',
+            maxHeight: '95vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            cursor: 'pointer',
+          }}
+        >
+          {open !== null && (
+            <>
+              <Box
+                component="img"
+                src={galleryPhotos[open].src}
+                alt=""
+                sx={{ maxWidth: '95vw', maxHeight: '90vh', objectFit: 'contain', display: 'block' }}
+              />
+              {galleryPhotos[open].caption && (
+                <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', color: '#fff', mt: 2, fontStyle: 'italic' }}>
+                  {galleryPhotos[open].caption}
+                </Typography>
+              )}
+            </>
+          )}
+        </Box>
+      </Modal>
+    </Container>
+  );
+}
+
+function Home() {
+  return (
+    <Container maxWidth="md" sx={{ pt: 3, pb: 5, fontFamily: '"EB Garamond", Georgia, serif' }}>
       <Grid container spacing={4}>
         <Grid item xs={12} md={7}>
           <Typography variant="h4" component="h1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700 }}>
@@ -246,6 +343,18 @@ function App() {
       </Box>
 
     </Container>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
+    </Router>
   );
 }
 
