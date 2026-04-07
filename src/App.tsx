@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { Box, Container, Typography, Link, Divider, Grid, IconButton, Stack, LinearProgress, Modal } from '@mui/material';
-import { HashRouter as Router, Routes, Route, Link as RouterLink } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link as RouterLink, useParams } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
 import img1 from './assets/meatUofR.jpeg';
@@ -92,14 +92,26 @@ function HoverPhoto() {
   );
 }
 
-const galleryPhotos = [
-  { src: '/gallery/1B579833-522D-4EB3-AAF5-CDAC86FA57F1.jpeg', caption: '' },
-  { src: '/gallery/456D69DC-C0C7-428B-A4E6-29E6E58686EC.jpeg', caption: '' },
-  { src: '/gallery/4F523043-1318-4F7A-BC40-22E8D7B0088B.jpeg', caption: '' },
-  { src: '/gallery/86111BCD-F086-4DDE-B611-CB8F2191F193.jpeg', caption: '' },
-  { src: '/gallery/86F01118-04DF-46D9-AAE4-7F127B7554AD.jpeg', caption: '' },
-  { src: '/gallery/9F90475D-0680-4F7C-AA87-6AD3165B3239.jpeg', caption: '' },
-  { src: '/gallery/C8237622-DC5C-48C4-ADB2-5EBC94A8C9B0.jpeg', caption: '' },
+type Series = {
+  slug: string;
+  title: string;
+  photos: { src: string; caption: string }[];
+};
+
+const gallerySeries: Series[] = [
+  {
+    slug: 'spring-uofr-2026',
+    title: 'Arrival of Spring at University of Rochester River Campus — April 2026',
+    photos: [
+      { src: '/gallery/spring-uofr-2026/1B579833-522D-4EB3-AAF5-CDAC86FA57F1.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/456D69DC-C0C7-428B-A4E6-29E6E58686EC.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/4F523043-1318-4F7A-BC40-22E8D7B0088B.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/86111BCD-F086-4DDE-B611-CB8F2191F193.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/86F01118-04DF-46D9-AAE4-7F127B7554AD.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/9F90475D-0680-4F7C-AA87-6AD3165B3239.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/C8237622-DC5C-48C4-ADB2-5EBC94A8C9B0.jpeg', caption: '' },
+    ],
+  },
 ];
 
 function Nav() {
@@ -112,18 +124,91 @@ function Nav() {
   );
 }
 
+function SeriesPreview({ series }: { series: Series }) {
+  const previews = series.photos.slice(0, 3);
+  return (
+    <Link component={RouterLink} to={`/gallery/${series.slug}`} sx={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+      <Box sx={{ '&:hover .stack-img': { transform: 'translateY(-4px)' } }}>
+        <Box sx={{ position: 'relative', height: '320px', mb: 2 }}>
+          {previews.map((photo, i) => (
+            <Box
+              key={i}
+              className="stack-img"
+              component="img"
+              src={photo.src}
+              alt=""
+              sx={{
+                position: 'absolute',
+                top: `${i * 12}px`,
+                left: `${i * 12}px`,
+                right: `${(previews.length - 1 - i) * 12}px`,
+                height: '280px',
+                objectFit: 'cover',
+                boxShadow: '0 4px 14px rgba(0,0,0,0.18)',
+                border: '4px solid #fff',
+                transition: 'transform 0.3s ease',
+                zIndex: i,
+              }}
+            />
+          ))}
+        </Box>
+        <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', mt: 2, fontStyle: 'italic' }}>
+          {series.title}
+        </Typography>
+        <Typography variant="body2" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', color: 'text.secondary' }}>
+          {series.photos.length} photo{series.photos.length === 1 ? '' : 's'}
+        </Typography>
+      </Box>
+    </Link>
+  );
+}
+
 function Gallery() {
-  const [open, setOpen] = useState<number | null>(null);
   return (
     <Container maxWidth="lg" sx={{ pt: 3, pb: 5, fontFamily: '"EB Garamond", Georgia, serif' }}>
       <Typography variant="h4" component="h1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, textAlign: 'center', mb: 1 }}>
         Gallery
       </Typography>
-      <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', color: 'text.secondary', mb: 4 }}>
-        A small collection from my film photography. Click any image to view it larger.
+      <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center', color: 'text.secondary', mb: 5 }}>
+        A small collection from my film photography, organized by series.
       </Typography>
+      <Grid container spacing={5}>
+        {gallerySeries.map(series => (
+          <Grid item xs={12} sm={6} md={4} key={series.slug}>
+            <SeriesPreview series={series} />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
+}
+
+function SeriesView() {
+  const { slug } = useParams<{ slug: string }>();
+  const [open, setOpen] = useState<number | null>(null);
+  const series = gallerySeries.find(s => s.slug === slug);
+
+  if (!series) {
+    return (
+      <Container maxWidth="md" sx={{ pt: 3, pb: 5, fontFamily: '"EB Garamond", Georgia, serif', textAlign: 'center' }}>
+        <Typography variant="body1">Series not found.</Typography>
+        <Link component={RouterLink} to="/gallery" sx={{ color: 'inherit' }}>← Back to Gallery</Link>
+      </Container>
+    );
+  }
+
+  return (
+    <Container maxWidth="lg" sx={{ pt: 3, pb: 5, fontFamily: '"EB Garamond", Georgia, serif' }}>
+      <Box sx={{ textAlign: 'center', mb: 4 }}>
+        <Link component={RouterLink} to="/gallery" sx={{ fontFamily: '"EB Garamond", Georgia, serif', color: 'inherit', fontStyle: 'italic' }}>
+          ← Back to Gallery
+        </Link>
+        <Typography variant="h5" sx={{ fontFamily: '"EB Garamond", Georgia, serif', fontWeight: 700, mt: 2 }}>
+          {series.title}
+        </Typography>
+      </Box>
       <Grid container spacing={2}>
-        {galleryPhotos.map((photo, i) => (
+        {series.photos.map((photo, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
             <Box
               onClick={() => setOpen(i)}
@@ -171,13 +256,13 @@ function Gallery() {
             <>
               <Box
                 component="img"
-                src={galleryPhotos[open].src}
+                src={series.photos[open].src}
                 alt=""
                 sx={{ maxWidth: '95vw', maxHeight: '90vh', objectFit: 'contain', display: 'block' }}
               />
-              {galleryPhotos[open].caption && (
+              {series.photos[open].caption && (
                 <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', color: '#fff', mt: 2, fontStyle: 'italic' }}>
-                  {galleryPhotos[open].caption}
+                  {series.photos[open].caption}
                 </Typography>
               )}
             </>
@@ -353,6 +438,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/:slug" element={<SeriesView />} />
       </Routes>
     </Router>
   );
