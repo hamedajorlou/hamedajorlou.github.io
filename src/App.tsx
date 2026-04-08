@@ -110,6 +110,8 @@ const gallerySeries: Series[] = [
       { src: '/gallery/spring-uofr-2026/86F01118-04DF-46D9-AAE4-7F127B7554AD.jpeg', caption: '' },
       { src: '/gallery/spring-uofr-2026/9F90475D-0680-4F7C-AA87-6AD3165B3239.jpeg', caption: '' },
       { src: '/gallery/spring-uofr-2026/C8237622-DC5C-48C4-ADB2-5EBC94A8C9B0.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/171915B8-8248-4978-AF90-0DA6EAF851A7.jpeg', caption: '' },
+      { src: '/gallery/spring-uofr-2026/4AACF766-EEFC-43C8-B825-FDFFC5407C14.jpeg', caption: '' },
     ],
   },
 ];
