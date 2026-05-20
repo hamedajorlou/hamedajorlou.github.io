@@ -315,7 +315,7 @@ function Home() {
               What roles do noise adaptivity, sparsity, and non-negativity play in DAG learning? [<em>IEEE SPM 2026</em>]
             </Typography>
             <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
-              How can we efficiently recover causal orderings from the precision matrix? [<em>ICASSP 2026</em>]
+              How can we efficiently recover causal connectivity from the precision matrix? [<em>ICASSP 2026</em>]
             </Typography>
             <Typography component="li" variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif' }}>
               How should we design graph convolutions that respect the directed, acyclic nature of causal graphs? [<em>IEEE TSP 2025</em>] [<em>NeurIPS Workshop 2025</em>]
