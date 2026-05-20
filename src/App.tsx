@@ -385,7 +385,7 @@ function Home() {
 
       <Box sx={{ '& > *': { mb: 2 } }}>
         <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
-          <strong>Summer 2026</strong> — I will be joining <strong>Fidelity Investments</strong> in Boston, MA as an Applied Scientist intern, working closely with the Quantitative Research and Graph Technology team.
+          <strong>Summer 2026</strong> — I will be joining <strong>Fidelity Investments</strong> in Boston, MA as an applied scientist intern, working closely with the Quantitative Research and Graph Technology team.
         </Typography>
 
         <Typography variant="body1" sx={{ fontFamily: '"EB Garamond", Georgia, serif', lineHeight: 1.8 }}>
